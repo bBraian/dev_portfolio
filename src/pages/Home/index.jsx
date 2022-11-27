@@ -9,6 +9,7 @@ import html from "../../assets/skills/vscode-icons_file-type-html.svg";
 import js from "../../assets/skills/vscode-icons_file-type-js-official.svg";
 import css from "../../assets/skills/vscode-icons_file-type-css.svg";
 import tailwind from "../../assets/skills/vscode-icons_file-type-tailwind.svg";
+import { ProjectSection } from "../../components/ProjectSection";
 
 export function Home() {
     return (
@@ -48,6 +49,9 @@ export function Home() {
                     <Skill src={github} />
                 </SkillsBox>
             </SkillsSection>
+
+
+            <ProjectSection />
 
         </HomeContainer>
     )

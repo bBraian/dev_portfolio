@@ -4,14 +4,17 @@ export const HeaderContainer = styled.header`
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin: 2.5rem 0;
+    height: 6rem;
     width: 100%;
     position: fixed;
+    backdrop-filter: blur(20px);
+    background: rgba(0,0,0,0, 0.5);
 `;
 
 export const Links = styled.div`
     display: flex;
     gap: 4rem;
+    align-items: center;
 
     a {
         text-decoration: none;
@@ -25,5 +28,6 @@ export const Links = styled.div`
 export const Icons = styled.div`
     display: flex;
     gap: 1.25rem;
+    align-items: center;
 `;
 

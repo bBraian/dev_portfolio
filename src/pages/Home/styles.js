@@ -67,13 +67,13 @@ export const Subtitle = styled.h2`
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     font-size: 2rem;
-    margin-top: 3.125rem;
+    margin-top: 2rem;
 `;
 
 export const SkillsBox = styled.div`
     display: flex;
     width: 100%;
-    max-width: 1300px;
+    max-width: 1280px;
     gap: 5.6875rem 6.4375rem;
     flex-wrap: wrap;
     justify-content: center;
