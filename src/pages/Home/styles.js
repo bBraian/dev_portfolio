@@ -8,8 +8,10 @@ export const HomeContainer = styled.div`
 export const HomeSection = styled.section`
     display: flex;
     height: 100vh;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    max-width: 1366px;
     align-items: center;
+    margin: 0 auto;
 `;
 
 export const BackgroundGradient = styled.div`
