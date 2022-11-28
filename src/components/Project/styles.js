@@ -26,9 +26,51 @@ export const Title = styled.h1`
     color: ${props => props.theme['titles']};
 `;
 
-export const Description = styled.span`
+export const Description = styled.p`
     font-family: 'Poppins', sans-serif;
     font-size: 1.125rem;
     font-weight: 300;
     color: ${props => props.theme['titles']};
+    margin-top: 1rem;
+`;
+
+export const TechStackBox = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 0.85rem;
+    align-items: center;
+`;
+
+export const TechTitle = styled.h3`
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: ${props => props.theme['titles']};
+`;
+
+export const TechBox = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0.55rem;
+    gap: 0.6rem;
+    justify-content: center;
+`;
+
+export const TechImg = styled.img`
+    width: 1.4rem;
+    height: 1.4rem;
+    object-fit: fill;
+`;
+
+export const LinkBox = styled.div`
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    justify-content: space-between;
+    margin-top: 1.32rem;
+`;
+
+export const Icon = styled.img`
+    
 `;
