@@ -1,15 +1,9 @@
-import { BackgroundGradient, HomeContainer, HomeSection, HomeTitle, ProfileImage, Skill, SkillsBox, SkillsSection, Subtitle, TextGradient, Title } from "./styles";
+import { BackgroundGradient, HomeContainer, HomeSection, HomeTitle, ProfileImage, TextGradient } from "./styles";
 import profile from "../../assets/images/profile_pic.png";
 
-import react from "../../assets/skills/react.svg";
-import boostrap from "../../assets/skills/bootstrap.svg";
-import github from "../../assets/skills/logos_git-icon.svg";
-import git from "../../assets/skills/akar-icons_github-fill.svg";
-import html from "../../assets/skills/vscode-icons_file-type-html.svg";
-import js from "../../assets/skills/vscode-icons_file-type-js-official.svg";
-import css from "../../assets/skills/vscode-icons_file-type-css.svg";
-import tailwind from "../../assets/skills/vscode-icons_file-type-tailwind.svg";
 import { ProjectSection } from "../../components/ProjectSection";
+import { Footer } from "../../components/Footer";
+import { SkillSection } from "../../components/SkillSection";
 
 export function Home() {
     return (
@@ -34,24 +28,12 @@ export function Home() {
                 </div>
             </HomeSection>
 
-            <SkillsSection>
-                <Title>My Tech Stack</Title>
-                <Subtitle>Technologies I’ve been working with recently</Subtitle>
 
-                <SkillsBox>
-                    <Skill src={html} />
-                    <Skill src={css} />
-                    <Skill src={js} />
-                    <Skill src={react} />
-                    <Skill src={boostrap} />
-                    <Skill src={tailwind} />
-                    <Skill src={git} />
-                    <Skill src={github} />
-                </SkillsBox>
-            </SkillsSection>
-
+            <SkillSection />
 
             <ProjectSection />
+
+            {/* <Footer /> */}
 
         </HomeContainer>
     )

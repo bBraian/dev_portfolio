@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
-export const ProjectSectionContainer = styled.section`
+export const SkillsSection = styled.section`
     display: flex;
     flex-direction: column;
-    margin: 3.375rem 0 12rem 0;
+    margin: 3.375rem 0 13.375rem 0;
     justify-content: space-around;
     align-items: center;
 `;
@@ -25,22 +25,39 @@ export const Subtitle = styled.h2`
     font-weight: 400;
     font-size: 2rem;
     margin-top: 2rem;
-    
+
     @media (max-width: 866px) {
         font-size: 1.6rem;
         margin-top: 1.4rem;
+        text-align: center;
     }
 `;
 
-export const ProjectsBox = styled.div`
-    @media (max-width: 866px) {
-        justify-content: center;
-        margin-top: 3.6rem;
+export const SkillsBox = styled.div`
+    @media (max-width: 1366px) {
+        gap: 3.2rem 4.3rem;
     }
+
+    @media (max-width: 866px) {
+        margin-top: 3.6rem;
+        gap: 2rem 2.5rem;
+    }
+
     margin-top: 6rem;
     display: flex;
+    width: 100%;
+    max-width: 1280px;
+    gap: 5.6875rem 6.4375rem;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    max-width: 1366px;
-    gap: 3rem 0;
+    justify-content: center;
+`;
+
+export const Skill = styled.img`
+    @media (max-width: 866px) {
+        max-width: 4.5rem;
+        max-height: 4.5rem;
+    }
+    max-width: 7rem;
+    max-height: 7rem;
+    object-fit: fill;
 `;

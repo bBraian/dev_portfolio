@@ -1,6 +1,12 @@
 import styled from "styled-components";
 
 export const ProjectContainer = styled.div`
+    @media (max-width: 1024px) {
+        width: auto;
+    }
+    @media (max-width: 866px) {
+        width: 88%;
+    }
     width: 30%;
     border-radius: 20px;
     display: flex;
@@ -14,6 +20,7 @@ export const ProjectContainer = styled.div`
 export const ProjectImage = styled.img`
     overflow: hidden;
     max-height: 16.25rem;
+    width: 100%;
 `;
 
 export const ProjectContent = styled.div`

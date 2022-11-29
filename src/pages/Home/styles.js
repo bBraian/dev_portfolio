@@ -7,21 +7,34 @@ export const HomeContainer = styled.div`
 
 export const HomeSection = styled.section`
     display: flex;
-    height: 100vh;
+    height: calc(100vh);
     justify-content: space-evenly;
     max-width: 1366px;
     align-items: center;
     margin: 0 auto;
+    padding-top: 6rem;
+    width: 100%;
+
+    @media (max-width: 1245px) {
+        flex-direction: column;
+        height: calc(100vh - 3.5rem);
+        padding-top: 3.5vh;
+        justify-content: space-evenly;
+    }
 `;
 
 export const BackgroundGradient = styled.div`
+    @media (max-width: 1245px) {
+        width: 10rem;
+        height: 10rem;
+    }
     width: 23.75rem;
     height: 23.75rem;
     border-radius: 50%;
     background: linear-gradient(180deg, rgba(231,15,170,1) 0%, rgba(0,192,253,1) 100%);
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center;  
 `;
 
 export const HomeTitle = styled.h1`
@@ -31,9 +44,16 @@ export const HomeTitle = styled.h1`
     font-family: 'Poppins', sans-serif;
     letter-spacing: -1px;
     line-height: 5rem;
+
+    
+    @media (max-width: 1245px) {
+        font-size: 2.6rem;
+        line-height: 1.4;
+        text-align: center;
+    }
 `;
 
-export const TextGradient = styled.h1`
+export const TextGradient = styled.div`
     background: linear-gradient(270deg, rgba(231,15,170,1) 0%, rgba(0,192,253,1) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -42,48 +62,18 @@ export const TextGradient = styled.h1`
     font-family: 'Poppins', sans-serif;
     letter-spacing: -1px;
     line-height: 5rem;
+
+    @media (max-width: 1245px) {
+        font-size: 2.6rem;
+        line-height: 1.4;
+    }
 `;
 
 export const ProfileImage = styled.img`
+    @media (max-width: 1245px) {
+        width: 9.6rem;
+        height: 9.6rem;
+    }
     width: 22.8rem;
     height: 22.8rem;
-`;
-
-export const SkillsSection = styled.section`
-    display: flex;
-    flex-direction: column;
-    margin: 3.375rem 0 13.375rem 0;
-    justify-content: space-around;
-    align-items: center;
-`;
-
-export const Title = styled.h1`
-    color: ${props => props.theme['titles']};
-    font-family: 'Poppins', sans-serif;
-    font-weight: bold;
-    font-size: 3rem;
-`;
-
-export const Subtitle = styled.h2`
-    color: ${props => props.theme['contents']};
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    font-size: 2rem;
-    margin-top: 2rem;
-`;
-
-export const SkillsBox = styled.div`
-    display: flex;
-    width: 100%;
-    max-width: 1280px;
-    gap: 5.6875rem 6.4375rem;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 8.75rem;
-`;
-
-export const Skill = styled.img`
-    max-width: 8rem;
-    max-height: 8rem;
-    object-fit: fill;
 `;
