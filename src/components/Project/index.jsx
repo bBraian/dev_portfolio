@@ -1,4 +1,4 @@
-import { Description, Icon, LinkBox, ProjectContainer, ProjectContent, ProjectImage, TechBox, TechImg, TechStackBox, TechTitle, Title } from "./styles";
+import { Description, Icon, Link, LinkBox, ProjectContainer, ProjectContent, ProjectImage, TechBox, TechImg, TechStackBox, TechTitle, TextLink, Title } from "./styles";
 import img from "../../assets/images/project.png";
 
 import githubIcon from "../../assets/github.svg";
@@ -34,14 +34,14 @@ export function Project() {
                 </TechStackBox>
 
                 <LinkBox>
-                    <div>
+                    <Link href="https://digital-menu-bbraian.vercel.app">
                         <Icon src={linkIcon} />
-                        <span>Live Preview</span>
-                    </div>
-                    <div>
+                        <TextLink>Live Preview</TextLink>
+                    </Link>
+                    <Link href="https://github.com/bBraian/digital-menu">
                         <Icon src={githubIcon} />
-                        <span>View Code</span>
-                    </div>
+                        <TextLink>View Code</TextLink>
+                    </Link>
                 </LinkBox>
             </ProjectContent>
         </ProjectContainer>

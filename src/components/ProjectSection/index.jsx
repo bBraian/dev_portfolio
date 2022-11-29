@@ -11,6 +11,7 @@ export function ProjectSection() {
                 <Project /> 
                 <Project /> 
                 <Project /> 
+                <Project /> 
             </ProjectsBox>
         </ProjectSectionContainer>
     )

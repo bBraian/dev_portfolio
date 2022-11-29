@@ -5,6 +5,10 @@ export const ProjectContainer = styled.div`
     border-radius: 20px;
     display: flex;
     flex-direction: column;
+    /* margin-bottom: 2rem; */
+    -webkit-box-shadow: 2px 2px 100px 0px rgba(0,0,0,1);
+    -moz-box-shadow: 2px 2px 100px 0px rgba(0,0,0,1);
+    box-shadow: 2px 2px 100px 0px rgba(0,0,0,1);
 `;
 
 export const ProjectImage = styled.img`
@@ -38,7 +42,7 @@ export const TechStackBox = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 0.85rem;
+    margin-top: 1rem;
     align-items: center;
 `;
 
@@ -68,9 +72,23 @@ export const LinkBox = styled.div`
     flex-direction: row;
     flex: 1;
     justify-content: space-between;
-    margin-top: 1.32rem;
+    margin-top: 1.5rem;
 `;
 
-export const Icon = styled.img`
-    
+export const Link = styled.a`
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    text-decoration-color: ${props => props.theme['white']};
 `;
+
+export const Icon = styled.img``;
+
+export const TextLink = styled.span`
+    color: ${props => props.theme['white']};
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+`

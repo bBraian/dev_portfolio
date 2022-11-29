@@ -29,4 +29,5 @@ export const ProjectsBox = styled.div`
     flex-wrap: wrap;
     justify-content: space-evenly;
     max-width: 1366px;
+    gap: 3rem 0;
 `;
