@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const SkillsSection = styled.section`
     display: flex;
     flex-direction: column;
-    margin: 3.375rem 0 13.375rem 0;
+    margin: 3.375rem 0 8.375rem 0;
     justify-content: space-around;
     align-items: center;
 `;

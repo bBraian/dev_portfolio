@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const HeaderContainer = styled.header`
     @media (max-width: 1024px) {
         height: 3.5rem;
-        /* border-bottom: 1px solid #cccc */
+        border-bottom: 1px solid ${props => props.theme['project-bg']};
     }
     display: flex;
     justify-content: space-around;
@@ -90,5 +90,11 @@ export const BackgroundGradient = styled.div`
 export const ProfileImage = styled.img`
     width: 1.6rem;
     height: 1.6rem;
+`;
+
+export const ButtonOpenNav = styled.a`
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `;
 

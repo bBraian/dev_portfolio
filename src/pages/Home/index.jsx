@@ -33,7 +33,7 @@ export function Home() {
 
             <ProjectSection />
 
-            {/* <Footer /> */}
+            <Footer />
 
         </HomeContainer>
     )

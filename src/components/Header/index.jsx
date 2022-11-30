@@ -1,12 +1,20 @@
-import { BackgroundGradient, HeaderContainer, HeaderDesktop, HeaderMobile, HeaderName, Icons, Links, ProfileHeader, ProfileImage } from './styles';
+import { BackgroundGradient, ButtonOpenNav, HeaderContainer, HeaderDesktop, HeaderMobile, HeaderName, Icons, Links, ProfileHeader, ProfileImage } from './styles';
 import twitter from "../../assets/ant-design_twitter-circle-filled.svg";
 import linkedin from "../../assets/entypo-social_linkedin-with-circle.svg";
 import github from "../../assets/Vector.svg";
 import profile from "../../assets/images/profile_pic.png";
 
 import { CgMenuRightAlt } from "react-icons/cg"
+import { CgClose } from "react-icons/cg"
+import { MobileMenu } from '../MobileMenu';
+import { useState } from 'react';
 
 export function Header() {
+    const [mobileNav, setMobileNav] = useState(false);
+
+    function handleOpenMobileNav() {
+        mobileNav ? setMobileNav(false) : setMobileNav(true);
+    }
     return (
         <HeaderContainer>
             <HeaderDesktop>
@@ -41,8 +49,13 @@ export function Header() {
                     <HeaderName>Braian</HeaderName>
                 </ProfileHeader>
                 
-                <CgMenuRightAlt color='white' size={24} />
+                <ButtonOpenNav onClick={handleOpenMobileNav}>
+                    { mobileNav ? <CgClose color='white' size={24} /> : <CgMenuRightAlt color='white' size={24} />}
+                </ButtonOpenNav>
             </HeaderMobile>
+
+            { mobileNav ? <MobileMenu /> : "" }
+            
 
         </HeaderContainer>
     )

@@ -10,8 +10,7 @@ export function ProjectSection() {
             <ProjectsBox>
                 <Project /> 
                 <Project /> 
-                <Project /> 
-                <Project /> 
+                <Project />
             </ProjectsBox>
         </ProjectSectionContainer>
     )

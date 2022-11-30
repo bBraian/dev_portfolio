@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ProjectContainer = styled.div`
     @media (max-width: 1024px) {
-        width: auto;
+        width: 45%;
     }
     @media (max-width: 866px) {
         width: 88%;
