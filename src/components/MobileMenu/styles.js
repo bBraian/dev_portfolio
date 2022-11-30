@@ -26,4 +26,39 @@ export const Link = styled.a`
 
 export const LanguageBox = styled.div`
     display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 1.5rem;
+`;
+
+export const Language = styled.a`
+    width: 2.9rem;
+    height: 1.8rem;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: left;
+    }
+`;
+
+export const ThemeSwitcherBox = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: ${props => props.theme['project-bg']};
+    margin-top: 1.5rem;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+`;
+
+export const SocialLinkBox = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
 `;
