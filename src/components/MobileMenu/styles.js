@@ -19,7 +19,7 @@ export const NavbarMobile = styled.nav`
 
 export const Link = styled.a`
     color: ${props => props.theme['titles']};
-    border-bottom: 1px solid ${props => props.theme['project-bg']};
+    border-bottom: 1px solid ${props => props.theme['separator']};
     padding: 0.75rem 0 0.6875rem;
     font-size: 1rem;
     font-weight: 500;
@@ -50,7 +50,7 @@ export const ThemeSwitcherBox = styled.div`
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background: ${props => props.theme['project-bg']};
+    background: ${props => props.theme['boxes']};
     margin-top: 1.5rem;
     border-radius: 8px;
     padding: 0.75rem 1rem;
@@ -71,12 +71,9 @@ export const SwitchRoot = styled(Switch.Root)`
     height: 25px;
     border-radius: 9999px;
     position: relative;
-    border: 0;
-    background-color: black;
+    border: 1px solid ${props => props.theme['border-switch']};
+    background-color: ${props => props.theme['background-switch']};
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    &[data-state='checked'] {
-        background-color: white;
-    }
 `;
 
 export const SwitchThumb = styled(Switch.Thumb)`
@@ -86,11 +83,12 @@ export const SwitchThumb = styled(Switch.Thumb)`
     width: 21px;
     height: 21px;
     border: 0;
-    background-color: white;
+    background-color: ${props => props.theme['icon-switch']};
     border-radius: 9999px;
     transition: transform 100ms;
     transform: translateX(2px);
     will-change: transform;
+    color: ${props => props.theme['color-icon-switch']};
 
     &[data-state='checked'] {
         transform: translateX(19px);
