@@ -1,4 +1,4 @@
-import { Language, LanguageBox, Link, MobileMenuContainer, NavbarMobile, SocialLinkBox, ThemeSwitcherBox } from "./styles";
+import { Language, LanguageBox, Link, MobileMenuContainer, NavbarMobile, SocialLinkBox, SwitchRoot, SwitchThumb, ThemeSwitcherBox } from "./styles";
 import brazil from "../../assets/brazil_flag.svg";
 import usa from "../../assets/us_flag.svg";
 
@@ -35,6 +35,11 @@ export function MobileMenu() {
 
                 <ThemeSwitcherBox>
                     <p>Apperance</p>
+
+                    <SwitchRoot>
+                        <SwitchThumb />
+                    </SwitchRoot>
+                    
                 </ThemeSwitcherBox>
 
                 <SocialLinkBox>
