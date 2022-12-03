@@ -21,6 +21,8 @@ export const ProjectImage = styled.img`
     overflow: hidden;
     max-height: 16.25rem;
     width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 `;
 
 export const ProjectContent = styled.div`

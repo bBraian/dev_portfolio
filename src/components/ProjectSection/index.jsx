@@ -1,5 +1,6 @@
 import { Project } from "../Project";
 import { ProjectsBox, ProjectSectionContainer, Subtitle, Title } from "./styles";
+import { projects } from "../../data/projects";
 
 export function ProjectSection() {
     return (
@@ -8,9 +9,11 @@ export function ProjectSection() {
             <Subtitle>Things I’ve built so far</Subtitle>
 
             <ProjectsBox>
-                <Project /> 
-                <Project /> 
-                <Project />
+                {projects.map(project => {
+                    return (
+                        <Project key={project.id} data={project} /> 
+                    )
+                })}
             </ProjectsBox>
         </ProjectSectionContainer>
     )

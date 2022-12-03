@@ -69,23 +69,25 @@ export const SocialLinkBox = styled.div`
 export const SwitchRoot = styled(Switch.Root)`
     width: 42px;
     height: 25px;
-    background-color: var(--blackA9);
     border-radius: 9999px;
     position: relative;
-    box-shadow: 0 2px 10px var(--blackA7);
+    border: 0;
+    background-color: black;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     &[data-state='checked'] {
-        background-color: black;
+        background-color: white;
     }
 `;
 
 export const SwitchThumb = styled(Switch.Thumb)`
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 21px;
     height: 21px;
+    border: 0;
     background-color: white;
     border-radius: 9999px;
-    box-shadow: 0 2px 2px var(--blackA7);
     transition: transform 100ms;
     transform: translateX(2px);
     will-change: transform;

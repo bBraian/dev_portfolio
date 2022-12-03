@@ -2,12 +2,18 @@ import { Language, LanguageBox, Link, MobileMenuContainer, NavbarMobile, SocialL
 import brazil from "../../assets/brazil_flag.svg";
 import usa from "../../assets/us_flag.svg";
 
+import { light } from "../../styles/themes/light";
+
 import twitter from "../../assets/ant-design_twitter-circle-filled.svg";
 import linkedin from "../../assets/entypo-social_linkedin-with-circle.svg";
 import github from "../../assets/Vector.svg";
-import { useState } from "react";
+import { useContext, useState } from "react";
+
+import { FiMoon, FiSun } from "react-icons/fi"
+import { AppContext } from "../../context/AppContext";
 
 export function MobileMenu() {
+    const { changeTheme, theme } = useContext(AppContext);
     const [language, setLanguage] = useState('eng');
 
     function handleChangeLanguage(lang) {
@@ -36,8 +42,12 @@ export function MobileMenu() {
                 <ThemeSwitcherBox>
                     <p>Apperance</p>
 
-                    <SwitchRoot>
-                        <SwitchThumb />
+                    <SwitchRoot onCheckedChange={changeTheme}>
+                        <SwitchThumb>
+                            { theme === light ? <FiSun /> : <FiMoon /> }
+                            
+                            
+                        </SwitchThumb>
                     </SwitchRoot>
                     
                 </ThemeSwitcherBox>
