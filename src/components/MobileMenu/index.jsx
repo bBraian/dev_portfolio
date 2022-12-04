@@ -13,12 +13,13 @@ import { FiMoon, FiSun } from "react-icons/fi"
 import { AppContext } from "../../context/AppContext";
 
 export function MobileMenu() {
-    const { changeTheme, theme } = useContext(AppContext);
-    const [language, setLanguage] = useState('eng');
+    const { changeTheme, theme, language, changeLanguage } = useContext(AppContext);
+    const [textLang, setTextLang] = useState('eng');
 
     function handleChangeLanguage(lang) {
-        if(lang !== language) {
-            setLanguage(lang)
+        if(lang !== textLang) {
+            changeLanguage();
+            setTextLang(lang);
         }
     }
     return (
@@ -32,10 +33,10 @@ export function MobileMenu() {
 
                 <LanguageBox>
                     <Language onClick={() => handleChangeLanguage('eng')}>
-                        <img src={usa} style={language === 'eng' ? {opacity: 1} : {opacity: 0.5}} />
+                        <img src={usa} style={textLang === 'eng' ? {opacity: 1} : {opacity: 0.5}} />
                     </Language>
                     <Language onClick={() =>handleChangeLanguage('pt')}>
-                        <img src={brazil} style={language === 'pt' ? {opacity: 1} : {opacity: 0.5}} />
+                        <img src={brazil} style={textLang === 'pt' ? {opacity: 1} : {opacity: 0.5}} />
                     </Language>
                 </LanguageBox>
 
@@ -45,8 +46,6 @@ export function MobileMenu() {
                     <SwitchRoot onCheckedChange={changeTheme}>
                         <SwitchThumb>
                             { theme === light ? <FiSun /> : <FiMoon /> }
-                            
-                            
                         </SwitchThumb>
                     </SwitchRoot>
                     

@@ -4,21 +4,24 @@ import profile from "../../assets/images/profile_pic.png";
 import { ProjectSection } from "../../components/ProjectSection";
 import { Footer } from "../../components/Footer";
 import { SkillSection } from "../../components/SkillSection";
+import { useContext } from "react";
+import { AppContext } from "../../context/AppContext";
 
 export function Home() {
+    const { language } = useContext(AppContext);
     return (
         <HomeContainer>
             <HomeSection>
                 <div>
                     <HomeTitle>
-                        Hi 👋,
+                        {language.hi} 👋,
                         <br />
-                        My name is
+                        {language.my_name_is}
                         <br />
                         <TextGradient>
                             Braian Viacava de Ávila
                         </TextGradient>
-                        I'm a Software Developer
+                        {language.im_a_software_developer}
                     </HomeTitle>
                 </div>
                 <div>

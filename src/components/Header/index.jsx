@@ -50,7 +50,7 @@ export function Header() {
                 </ProfileHeader>
                 
                 <ButtonOpenNav onClick={handleOpenMobileNav}>
-                    { mobileNav ? <CgClose color={props => props.theme['background']} size={24} /> : <CgMenuRightAlt color={props => props.theme['background']} size={24} />}
+                    { mobileNav ? <CgClose color="${props => props.theme['background']}" size={24} /> : <CgMenuRightAlt color="${props => props.theme['background']}" size={24} />}
                 </ButtonOpenNav>
             </HeaderMobile>
 
