@@ -2,46 +2,47 @@ import { Language, LanguageBox, Link, MobileMenuContainer, NavbarMobile, SocialL
 import brazil from "../../assets/brazil_flag.svg";
 import usa from "../../assets/us_flag.svg";
 
+import { portuguese } from "../../data/languages/portuguese";
+import { english } from "../../data/languages/english";
+
 import { light } from "../../styles/themes/light";
 
 import twitter from "../../assets/ant-design_twitter-circle-filled.svg";
 import linkedin from "../../assets/entypo-social_linkedin-with-circle.svg";
 import github from "../../assets/Vector.svg";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 
 import { FiMoon, FiSun } from "react-icons/fi"
 import { AppContext } from "../../context/AppContext";
 
 export function MobileMenu() {
-    const { changeTheme, theme, language, changeLanguage } = useContext(AppContext);
-    const [textLang, setTextLang] = useState('eng');
+    const { changeTheme, theme, language, setLanguage } = useContext(AppContext);
 
     function handleChangeLanguage(lang) {
-        if(lang !== textLang) {
-            changeLanguage();
-            setTextLang(lang);
+        if(lang !== language) {
+            setLanguage(lang);
         }
     }
     return (
         <MobileMenuContainer>
             <NavbarMobile>
-                <Link>Home</Link>
-                <Link>About</Link>
-                <Link>Tech Stack</Link>
-                <Link>Projects</Link>
-                <Link>Contact</Link>
+                <Link>{language.home}</Link>
+                <Link>{language.about}</Link>
+                <Link>{language.tech_stack}</Link>
+                <Link>{language.projects}</Link>
+                <Link>{language.contact}</Link>
 
                 <LanguageBox>
-                    <Language onClick={() => handleChangeLanguage('eng')}>
-                        <img src={usa} style={textLang === 'eng' ? {opacity: 1} : {opacity: 0.5}} />
+                    <Language onClick={() => handleChangeLanguage(english)}>
+                        <img src={usa} style={language === english ? {opacity: 1} : {opacity: 0.5}} />
                     </Language>
-                    <Language onClick={() =>handleChangeLanguage('pt')}>
-                        <img src={brazil} style={textLang === 'pt' ? {opacity: 1} : {opacity: 0.5}} />
+                    <Language onClick={() =>handleChangeLanguage(portuguese)}>
+                        <img src={brazil} style={language === portuguese ? {opacity: 1} : {opacity: 0.5}} />
                     </Language>
                 </LanguageBox>
 
                 <ThemeSwitcherBox>
-                    <p>Apperance</p>
+                    <p>{language.apperance}</p>
 
                     <SwitchRoot onCheckedChange={changeTheme}>
                         <SwitchThumb>
