@@ -1,15 +1,25 @@
-import { BackgroundGradient, ButtonOpenNav, HeaderContainer, HeaderDesktop, HeaderMobile, HeaderName, Icons, Links, ProfileHeader, ProfileImage } from './styles';
+import { BackgroundGradient, ButtonOpenNav, ConfigBox, HeaderContainer, HeaderDesktop, HeaderMobile, HeaderName, Icons, LangImg, LangOption, Links, ProfileHeader, ProfileImage, SelectLanguage, SwitchRoot, SwitchThumb } from './styles';
 import twitter from "../../assets/ant-design_twitter-circle-filled.svg";
 import linkedin from "../../assets/entypo-social_linkedin-with-circle.svg";
 import github from "../../assets/Vector.svg";
 import profile from "../../assets/images/profile_pic.png";
 
+import brazil from "../../assets/brazil_flag.svg";
+import usa from "../../assets/us_flag.svg";
+
+import { FiMoon, FiSun } from "react-icons/fi";
+
+import { light } from "../../styles/themes/light";
+
 import { CgMenuRightAlt } from "react-icons/cg"
 import { CgClose } from "react-icons/cg"
 import { MobileMenu } from '../MobileMenu';
 import { useState } from 'react';
+import { useContext } from 'react';
+import { AppContext } from '../../context/AppContext';
 
 export function Header() {
+    const { changeTheme, theme } = useContext(AppContext);
     const [mobileNav, setMobileNav] = useState(false);
 
     function handleOpenMobileNav() {
@@ -18,7 +28,6 @@ export function Header() {
     return (
         <HeaderContainer>
             <HeaderDesktop>
-                <div>bBraian</div>
 
                 <Links>
                     <a href="">Home</a>
@@ -39,6 +48,23 @@ export function Header() {
                         </a>
                     </Icons>
                 </Links>
+
+                <ConfigBox>
+                    <SwitchRoot onCheckedChange={changeTheme}>
+                        <SwitchThumb>
+                            { theme === light ? <FiSun /> : <FiMoon /> }
+                        </SwitchThumb>
+                    </SwitchRoot>
+                    <div>|</div>
+                    <SelectLanguage>
+                        <LangOption>
+                            English
+                        </LangOption>
+                        <LangOption>
+                            Portuguese
+                        </LangOption>
+                    </SelectLanguage>
+                </ConfigBox>
             </HeaderDesktop>
 
             <HeaderMobile>

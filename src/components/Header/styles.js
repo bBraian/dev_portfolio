@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import * as Switch from '@radix-ui/react-switch';
 
 export const HeaderContainer = styled.header`
     @media (max-width: 1024px) {
@@ -96,5 +97,73 @@ export const ButtonOpenNav = styled.a`
     display: flex;
     justify-content: center;
     align-items: center;
+`;
+
+export const ConfigBox = styled.div`
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+`;
+
+export const SwitchRoot = styled(Switch.Root)`
+    width: 42px;
+    height: 25px;
+    border-radius: 9999px;
+    position: relative;
+    border: 1px solid ${props => props.theme['border-switch']};
+    background-color: ${props => props.theme['background-switch']};
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+`;
+
+export const SwitchThumb = styled(Switch.Thumb)`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 21px;
+    height: 21px;
+    border: 0;
+    background-color: ${props => props.theme['icon-switch']};
+    border-radius: 9999px;
+    transition: transform 100ms;
+    transform: translateX(2px);
+    will-change: transform;
+    color: ${props => props.theme['color-icon-switch']};
+
+    &[data-state='checked'] {
+        transform: translateX(19px);
+    }
+`;
+
+export const SelectLanguage = styled.select`
+    height: 1.6rem;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid ${props => props.theme['border-switch']};
+    background-color: ${props => props.theme['background-switch']};
+    border-radius: 1rem;
+    -webkit-appearance: none;
+    color: ${props => props.theme['color-icon-switch']};
+
+    &::-ms-expand {
+        display: none;
+    }
+`;
+
+export const LangOption = styled.option`
+    height: 1.6rem;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+`;
+
+export const LangImg = styled.img`
+    height: 1rem;
+    width: 0.4rem;
+    object-fit: cover;
+    object-position: left;
 `;
 
