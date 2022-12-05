@@ -63,6 +63,7 @@ export function Header() {
                         <LangOption>
                             Portuguese
                         </LangOption>
+                        
                     </SelectLanguage>
                 </ConfigBox>
             </HeaderDesktop>
