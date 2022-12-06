@@ -214,7 +214,6 @@ export const SelectItem = styled(Select.Item)`
 
     &[data-highlighted] {
         outline: none;
-        background-color: gray;
         opacity: 1; 
     }
 `;

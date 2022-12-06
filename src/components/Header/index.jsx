@@ -4,6 +4,9 @@ import linkedin from "../../assets/entypo-social_linkedin-with-circle.svg";
 import github from "../../assets/Vector.svg";
 import profile from "../../assets/images/profile_pic.png";
 
+import { portuguese } from "../../data/languages/portuguese";
+import { english } from "../../data/languages/english";
+
 import * as Select from '@radix-ui/react-select';
 
 import brazil from "../../assets/brazil_flag.svg";
@@ -23,8 +26,16 @@ import { useContext } from 'react';
 import { AppContext } from '../../context/AppContext';
 
 export function Header() {
-    const { changeTheme, theme } = useContext(AppContext);
+    const { changeTheme, theme, language, setLanguage } = useContext(AppContext);
     const [mobileNav, setMobileNav] = useState(false);
+
+    function changeLanguage(lang) {
+        if(lang === "pt") {
+            setLanguage(portuguese);
+        } else {
+            setLanguage(english);
+        }
+    }
 
     function handleOpenMobileNav() {
         mobileNav ? setMobileNav(false) : setMobileNav(true);
@@ -65,7 +76,7 @@ export function Header() {
                     <div>|</div>
 
 
-                    <Select.Root>
+                    <Select.Root onValueChange={(lang) => changeLanguage(lang)} defaultValue="eng">
                         <SelectTrigger>
                             <LangSelect>
                                 <SelectIcon>
@@ -83,14 +94,14 @@ export function Header() {
                                 <SelectScrollButton />
                                 <SelectViewport>
 
-                                    <SelectItem value="English">
+                                    <SelectItem value="eng">
                                         <LangImg src={usa} />
                                         <Select.ItemText>English</Select.ItemText>
                                         <SelectItemIndicator>
                                             <FiCheck />
                                         </SelectItemIndicator>
                                     </SelectItem>
-                                    <SelectItem value="Portuguese">
+                                    <SelectItem value="pt">
                                         <LangImg src={brazil} />
                                         <Select.ItemText>Portuguese</Select.ItemText>
                                         <SelectItemIndicator>
