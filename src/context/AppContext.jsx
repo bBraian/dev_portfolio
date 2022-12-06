@@ -17,7 +17,7 @@ export function AppContextProvider({children}) {
 
     return (
         <AppContext.Provider
-            value={{ language, setLanguage, changeTheme, theme, language, setLanguage }}
+            value={{ language, setLanguage, changeTheme, theme }}
         >
             {children}
         </AppContext.Provider>

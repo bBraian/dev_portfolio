@@ -4,6 +4,8 @@ import linkedin from "../../assets/entypo-social_linkedin-with-circle.svg";
 import github from "../../assets/Vector.svg";
 import profile from "../../assets/images/profile_pic.png";
 
+import * as Select from '@radix-ui/react-select';
+
 import brazil from "../../assets/brazil_flag.svg";
 import usa from "../../assets/us_flag.svg";
 
@@ -48,16 +50,50 @@ export function Header() {
                         </a>
                     </Icons>
                 </Links>
-                
+
 
                 <ConfigBox>
+
                     <SwitchRoot onCheckedChange={changeTheme}>
                         <SwitchThumb>
                             { theme === light ? <FiSun /> : <FiMoon /> }
                         </SwitchThumb>
                     </SwitchRoot>
+
                     <div>|</div>
-                    <SelectLanguage>
+
+
+                    <Select.Root>
+                        <Select.Trigger>
+                        <Select.Value />
+                        <Select.Icon />
+                        </Select.Trigger>
+
+                        <Select.Portal>
+                        <Select.Content>
+                            <Select.ScrollUpButton />
+                            <Select.Viewport>
+                            <Select.Item>
+                                <Select.ItemText />
+                                <Select.ItemIndicator />
+                            </Select.Item>
+
+                            <Select.Group>
+                                <Select.Label />
+                                <Select.Item>
+                                <Select.ItemText />
+                                <Select.ItemIndicator />
+                                </Select.Item>
+                            </Select.Group>
+
+                            <Select.Separator />
+                            </Select.Viewport>
+                            <Select.ScrollDownButton />
+                        </Select.Content>
+                        </Select.Portal>
+                    </Select.Root>
+
+                    {/* <SelectLanguage>
                         <LangOption>
                             English
                         </LangOption>
@@ -65,7 +101,8 @@ export function Header() {
                             Portuguese
                         </LangOption>
                         
-                    </SelectLanguage>
+                    </SelectLanguage> */}
+
                 </ConfigBox>
             </HeaderDesktop>
 
