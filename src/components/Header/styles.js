@@ -175,7 +175,7 @@ export const SelectValue = styled(Select.Value)`
 
 export const SelectContent = styled(Select.Content)`
     overflow: hidden;
-    background-color: red;
+    background-color: ${props => props.theme['background-switch']};
     border-radius: 6px;
     box-shadow: 0px 10px 38px -10px rgba(22, 23, 24, 0.35), 0px 10px 20px -15px rgba(22, 23, 24, 0.2);
 `;
@@ -189,15 +189,15 @@ export const SelectScrollButton = styled(Select.SelectScrollUpButton)`
     align-items: center;
     justify-content: center;
     height: 25px;
-    background-color: white;
-    color: blue;
+    background-color: ${props => props.theme['background-switch']};
+    color: ${props => props.theme['color-icon-switch']};
     cursor: default;
 `;
 
 export const SelectItem = styled(Select.Item)`
     font-size: 13px;
     line-height: 1;
-    color: green;
+    color: ${props => props.theme['color-icon-switch']};
     border-radius: 3px;
     display: flex;
     align-items: center;
@@ -205,16 +205,17 @@ export const SelectItem = styled(Select.Item)`
     padding: 0 35px 0 25px;
     position: relative;
     user-select: none;
+    opacity: 0.6;
 
     &[data-disabled] {
-        color: black;
+        opacity: 0.3;
         pointer-events: none;
     }
 
     &[data-highlighted] {
         outline: none;
         background-color: gray;
-        color: violet;   
+        opacity: 1;
     }
 `;
 
@@ -225,20 +226,4 @@ export const SelectItemIndicator = styled(Select.ItemIndicator)`
     display: inline-flex;
     align-items: center;
     justify-content: center;
-`;
-
-export const LangOption = styled.option`
-    height: 1.6rem;
-    padding: 0 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-`;
-
-export const LangImg = styled.img`
-    height: 1rem;
-    width: 0.4rem;
-    object-fit: cover;
-    object-position: left;
 `;
