@@ -1,4 +1,4 @@
-import { BackgroundGradient, ButtonOpenNav, ConfigBox, HeaderContainer, HeaderDesktop, HeaderMobile, HeaderName, Icons, LangImg, LangOption, Links, ProfileHeader, ProfileImage, SelectLanguage, SwitchRoot, SwitchThumb } from './styles';
+import { BackgroundGradient, ButtonOpenNav, ConfigBox, HeaderContainer, HeaderDesktop, HeaderMobile, HeaderName, Icons, LangSelect, Links, ProfileHeader, ProfileImage, SelectContent, SelectIcon, SelectItem, SelectItemIndicator, SelectScrollButton, SelectTrigger, SelectValue, SelectViewport, SwitchRoot, SwitchThumb } from './styles';
 import twitter from "../../assets/ant-design_twitter-circle-filled.svg";
 import linkedin from "../../assets/entypo-social_linkedin-with-circle.svg";
 import github from "../../assets/Vector.svg";
@@ -10,6 +10,8 @@ import brazil from "../../assets/brazil_flag.svg";
 import usa from "../../assets/us_flag.svg";
 
 import { FiMoon, FiSun } from "react-icons/fi";
+import { RiArrowDownSLine } from "react-icons/ri";
+import { IoLanguageOutline } from "react-icons/io5";
 
 import { light } from "../../styles/themes/light";
 
@@ -64,32 +66,35 @@ export function Header() {
 
 
                     <Select.Root>
-                        <Select.Trigger>
-                        <Select.Value />
-                        <Select.Icon />
-                        </Select.Trigger>
+                        <SelectTrigger>
+                            <LangSelect>
+                                <SelectIcon>
+                                    <IoLanguageOutline size={16} />
+                                </SelectIcon>
+                                <SelectValue placeholder="Language" />
+                            </LangSelect>
+                            <SelectIcon>
+                                <RiArrowDownSLine size={16} />
+                            </SelectIcon>
+                        </SelectTrigger>
 
                         <Select.Portal>
-                        <Select.Content>
-                            <Select.ScrollUpButton />
-                            <Select.Viewport>
-                            <Select.Item>
-                                <Select.ItemText />
-                                <Select.ItemIndicator />
-                            </Select.Item>
+                            <SelectContent>
+                                <SelectScrollButton />
+                                <SelectViewport>
 
-                            <Select.Group>
-                                <Select.Label />
-                                <Select.Item>
-                                <Select.ItemText />
-                                <Select.ItemIndicator />
-                                </Select.Item>
-                            </Select.Group>
+                                    <SelectItem value="English">
+                                        <Select.ItemText>English</Select.ItemText>
+                                        <SelectItemIndicator />
+                                    </SelectItem>
+                                    <SelectItem value="Portuguese">
+                                        <Select.ItemText>Portuguese</Select.ItemText>
+                                        <SelectItemIndicator />
+                                    </SelectItem>
 
-                            <Select.Separator />
-                            </Select.Viewport>
-                            <Select.ScrollDownButton />
-                        </Select.Content>
+                                </SelectViewport>
+                                <Select.ScrollDownButton />
+                            </SelectContent>
                         </Select.Portal>
                     </Select.Root>
 

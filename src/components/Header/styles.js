@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import * as Switch from '@radix-ui/react-switch';
+import * as Select from '@radix-ui/react-select';
 
 export const HeaderContainer = styled.header`
     @media (max-width: 1024px) {
@@ -134,21 +135,96 @@ export const SwitchThumb = styled(Switch.Thumb)`
     }
 `;
 
-export const SelectLanguage = styled.select`
+export const SelectTrigger = styled(Select.Trigger)`
     height: 1.6rem;
-    padding: 0 1rem;
+    padding: 0 0.4rem 0 0.6rem;
     display: flex;
+    gap: 9px;
+    justify-content: space-between;
     justify-content: center;
     align-items: center;
     border: 1px solid ${props => props.theme['border-switch']};
     background-color: ${props => props.theme['background-switch']};
     border-radius: 1rem;
     -webkit-appearance: none;
+    font-size: 0.85rem;
+    font-weight: 400;
     color: ${props => props.theme['color-icon-switch']};
 
     &::-ms-expand {
         display: none;
     }
+`;
+
+export const LangSelect = styled.div`
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+`;
+
+export const SelectIcon = styled(Select.Icon)`
+    color: ${props => props.theme['color-icon-switch']};
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`;
+
+export const SelectValue = styled(Select.Value)`
+    color: ${props => props.theme['color-icon-switch']};
+`;
+
+export const SelectContent = styled(Select.Content)`
+    overflow: hidden;
+    background-color: red;
+    border-radius: 6px;
+    box-shadow: 0px 10px 38px -10px rgba(22, 23, 24, 0.35), 0px 10px 20px -15px rgba(22, 23, 24, 0.2);
+`;
+
+export const SelectViewport = styled(Select.Viewport)`
+    padding: 5px;
+`;
+
+export const SelectScrollButton = styled(Select.SelectScrollUpButton)`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25px;
+    background-color: white;
+    color: blue;
+    cursor: default;
+`;
+
+export const SelectItem = styled(Select.Item)`
+    font-size: 13px;
+    line-height: 1;
+    color: green;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    height: 25px;
+    padding: 0 35px 0 25px;
+    position: relative;
+    user-select: none;
+
+    &[data-disabled] {
+        color: black;
+        pointer-events: none;
+    }
+
+    &[data-highlighted] {
+        outline: none;
+        background-color: gray;
+        color: violet;   
+    }
+`;
+
+export const SelectItemIndicator = styled(Select.ItemIndicator)`
+    position: absolute;
+    left: 0;
+    width: 25px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 `;
 
 export const LangOption = styled.option`
@@ -166,4 +242,3 @@ export const LangImg = styled.img`
     object-fit: cover;
     object-position: left;
 `;
-
