@@ -202,7 +202,7 @@ export const SelectItem = styled(Select.Item)`
     display: flex;
     align-items: center;
     height: 25px;
-    padding: 0 35px 0 25px;
+    padding: 0 30px 0 20px;
     position: relative;
     user-select: none;
     opacity: 0.6;
@@ -215,7 +215,7 @@ export const SelectItem = styled(Select.Item)`
     &[data-highlighted] {
         outline: none;
         background-color: gray;
-        opacity: 1;
+        opacity: 1; 
     }
 `;
 
@@ -226,4 +226,13 @@ export const SelectItemIndicator = styled(Select.ItemIndicator)`
     display: inline-flex;
     align-items: center;
     justify-content: center;
+`;
+
+
+export const LangImg = styled.img`
+    height: 1rem;
+    width: 1.6rem;
+    margin: 6px;
+    object-fit: cover;
+    object-position: left;
 `;

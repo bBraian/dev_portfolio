@@ -1,4 +1,4 @@
-import { BackgroundGradient, ButtonOpenNav, ConfigBox, HeaderContainer, HeaderDesktop, HeaderMobile, HeaderName, Icons, LangSelect, Links, ProfileHeader, ProfileImage, SelectContent, SelectIcon, SelectItem, SelectItemIndicator, SelectScrollButton, SelectTrigger, SelectValue, SelectViewport, SwitchRoot, SwitchThumb } from './styles';
+import { BackgroundGradient, ButtonOpenNav, ConfigBox, HeaderContainer, HeaderDesktop, HeaderMobile, HeaderName, Icons, LangImg, LangSelect, Links, ProfileHeader, ProfileImage, SelectContent, SelectIcon, SelectItem, SelectItemIndicator, SelectScrollButton, SelectTrigger, SelectValue, SelectViewport, SwitchRoot, SwitchThumb } from './styles';
 import twitter from "../../assets/ant-design_twitter-circle-filled.svg";
 import linkedin from "../../assets/entypo-social_linkedin-with-circle.svg";
 import github from "../../assets/Vector.svg";
@@ -9,7 +9,7 @@ import * as Select from '@radix-ui/react-select';
 import brazil from "../../assets/brazil_flag.svg";
 import usa from "../../assets/us_flag.svg";
 
-import { FiMoon, FiSun } from "react-icons/fi";
+import { FiMoon, FiSun, FiCheck } from "react-icons/fi";
 import { RiArrowDownSLine } from "react-icons/ri";
 import { IoLanguageOutline } from "react-icons/io5";
 
@@ -84,12 +84,18 @@ export function Header() {
                                 <SelectViewport>
 
                                     <SelectItem value="English">
+                                        <LangImg src={usa} />
                                         <Select.ItemText>English</Select.ItemText>
-                                        <SelectItemIndicator />
+                                        <SelectItemIndicator>
+                                            <FiCheck />
+                                        </SelectItemIndicator>
                                     </SelectItem>
                                     <SelectItem value="Portuguese">
+                                        <LangImg src={brazil} />
                                         <Select.ItemText>Portuguese</Select.ItemText>
-                                        <SelectItemIndicator />
+                                        <SelectItemIndicator>
+                                            <FiCheck />
+                                        </SelectItemIndicator>
                                     </SelectItem>
 
                                 </SelectViewport>
