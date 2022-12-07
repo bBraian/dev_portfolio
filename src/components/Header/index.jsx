@@ -26,7 +26,7 @@ import { useContext } from 'react';
 import { AppContext } from '../../context/AppContext';
 
 export function Header() {
-    const { changeTheme, theme, language, setLanguage } = useContext(AppContext);
+    const { changeTheme, theme, setLanguage, scrollToSection, homeRef, skillsRef, projectsRef } = useContext(AppContext);
     const [mobileNav, setMobileNav] = useState(false);
 
     function changeLanguage(lang) {
@@ -45,11 +45,11 @@ export function Header() {
             <HeaderDesktop>
 
                 <Links>
-                    <a href="">Home</a>
-                    <a href="">About</a>
-                    <a href="">Tech Stack</a>
-                    <a href="">Projects</a>
-                    <a href="">Contact</a>
+                    <button onClick={() => scrollToSection(homeRef)}>Home</button>
+                    <button>About</button>
+                    <button onClick={() => scrollToSection(skillsRef)}>Tech Stack</button>
+                    <button onClick={() => scrollToSection(projectsRef)}>Projects</button>
+                    <button>Contact</button>
 
                     <Icons>
                         <a href="https://github.com/bBraian">

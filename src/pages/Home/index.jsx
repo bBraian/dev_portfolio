@@ -8,9 +8,9 @@ import { useContext } from "react";
 import { AppContext } from "../../context/AppContext";
 
 export function Home() {
-    const { language } = useContext(AppContext);
+    const { language, homeRef } = useContext(AppContext);
     return (
-        <HomeContainer>
+        <HomeContainer ref={homeRef}>
             <HomeSection>
                 <div>
                     <HomeTitle>
@@ -30,7 +30,6 @@ export function Home() {
                     </BackgroundGradient>
                 </div>
             </HomeSection>
-
 
             <SkillSection />
 

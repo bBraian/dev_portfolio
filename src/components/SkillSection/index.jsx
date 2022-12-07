@@ -8,10 +8,13 @@ import html from "../../assets/skills/vscode-icons_file-type-html.svg";
 import js from "../../assets/skills/vscode-icons_file-type-js-official.svg";
 import css from "../../assets/skills/vscode-icons_file-type-css.svg";
 import tailwind from "../../assets/skills/vscode-icons_file-type-tailwind.svg";
+import { useContext } from "react";
+import { AppContext } from "../../context/AppContext";
 
 export function SkillSection() {
+    const { skillsRef } = useContext(AppContext);
     return (
-        <SkillsSection>
+        <SkillsSection ref={skillsRef}>
             <Title>My Tech Stack</Title>
             <Subtitle>Technologies I’ve been working with recently</Subtitle>
 

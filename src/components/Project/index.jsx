@@ -5,10 +5,13 @@ import linkIcon from "../../assets/link.svg";
 
 import react from "../../assets/skills/react.svg";
 import html from "../../assets/skills/vscode-icons_file-type-js-official.svg";
+import { useContext } from "react";
+import { AppContext } from "../../context/AppContext";
 
 export function Project(props) {
+    const { projectsRef } = useContext(AppContext);
     return (
-        <ProjectContainer>
+        <ProjectContainer ref={projectsRef}>
             <ProjectImage src={props.data.image} />
 
             <ProjectContent>

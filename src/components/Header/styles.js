@@ -36,13 +36,15 @@ export const Links = styled.div`
     gap: 4rem;
     align-items: center;
 
-    a {
+    button {
         text-decoration: none;
         color: ${props => props.theme['contents']};
         font-family: 'DM Sans', sans-serif;
         font-size: 1.25rem;
         font-weight: 500;
+        box-shadow: none;
     }
+
 `;
 
 export const Icons = styled.div`
