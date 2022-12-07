@@ -9,5 +9,14 @@ export const english = {
     'tech_stack': 'Tech Stack',
     'projects': 'Projects',
     'contact': 'Contact',
-    'apperance': 'Apperance'
+    'apperance': 'Apperance',
+
+    'my_tech_stack': 'My Tech Stack',
+    'tecnologies_section_description': 'Technologies I’ve been working with recently',
+
+    'projects': 'Projects',
+    'projects_section_description': 'Things I’ve built so far',
+    'tecnologies': 'Tecnologies',
+    'live_preview': 'Live Preview',
+    'view_code': 'View Code'
 }

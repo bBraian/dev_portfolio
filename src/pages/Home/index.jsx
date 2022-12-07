@@ -4,11 +4,31 @@ import profile from "../../assets/images/profile_pic.png";
 import { ProjectSection } from "../../components/ProjectSection";
 import { Footer } from "../../components/Footer";
 import { SkillSection } from "../../components/SkillSection";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { AppContext } from "../../context/AppContext";
+import { useLocation } from "react-router-dom";
+
 
 export function Home() {
-    const { language, homeRef } = useContext(AppContext);
+    const { language, homeRef, skillsRef, projectsRef, scrollToSection } = useContext(AppContext);
+    const { state } = useLocation();
+    const { targetSection } = state || {};
+    useEffect(() => {
+        if(targetSection != "") {
+            switch (targetSection) {
+                case 'homeRef':
+                    scrollToSection(homeRef);
+                    break;
+                case 'skillsRef':
+                    scrollToSection(skillsRef);
+                    break;
+                case 'projectsRef':
+                    scrollToSection(projectsRef);
+                    break;
+            }
+            
+        }
+    }, [])
     return (
         <HomeContainer ref={homeRef}>
             <HomeSection>

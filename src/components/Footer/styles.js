@@ -49,9 +49,10 @@ export const FooterLinks = styled.div`
     flex-direction: row;
     gap: 4rem;
 
-    a {
+    button {
         text-decoration: none;
         color: ${props => props.theme['contents']};
+        box-shadow: none;
     }
 `;
 

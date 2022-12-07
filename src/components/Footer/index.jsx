@@ -2,8 +2,17 @@ import { AuthorText, FooterContact, FooterContactMobile, FooterContainer, Footer
 import twitter from "../../assets/ant-design_twitter-circle-filled.svg";
 import linkedin from "../../assets/entypo-social_linkedin-with-circle.svg";
 import github from "../../assets/Vector.svg";
+import { useContext } from "react";
+import { AppContext } from "../../context/AppContext";
+import { useNavigate } from "react-router-dom";
 
 export function Footer() {
+    const { homeRef, skillsRef, projectsRef, scrollToSection, language  } = useContext(AppContext);
+    const navigate = useNavigate();
+
+    function handleNavigateTo(page) {
+        navigate(page);
+    }
     return (
         <FooterContainer>
             <FooterDesktop>
@@ -32,11 +41,11 @@ export function Footer() {
 
                 <RowSpaceBetween>
                     <FooterLinks>
-                        <a href="">Home</a>
-                        <a href="">About</a>
-                        <a href="">Tecnologies</a>
-                        <a href="">Projects</a>
-                        <a href="">Contact</a>
+                        <button onClick={() => scrollToSection(homeRef)}>{language.home}</button>
+                        <button onClick={() => handleNavigateTo('/about')}>{language.about}</button>
+                        <button onClick={() => scrollToSection(skillsRef)}>{language.tech_stack}</button>
+                        <button onClick={() => scrollToSection(projectsRef)}>{language.projects}</button>
+                        <button onClick={() => handleNavigateTo('/contact')}>{language.contact}</button>
                     </FooterLinks>
 
                     <span>By bBraian</span>

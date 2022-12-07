@@ -9,7 +9,7 @@ import { useContext } from "react";
 import { AppContext } from "../../context/AppContext";
 
 export function Project(props) {
-    const { projectsRef } = useContext(AppContext);
+    const { projectsRef, language } = useContext(AppContext);
     return (
         <ProjectContainer ref={projectsRef}>
             <ProjectImage src={props.data.image} />
@@ -22,7 +22,7 @@ export function Project(props) {
                 </Description>
 
                 <TechStackBox>
-                    <TechTitle>Tecnologies</TechTitle>
+                    <TechTitle>{language.tecnologies}</TechTitle>
                     <TechBox>
                         <TechImg src={react} />
                         <TechImg src={html} />
@@ -32,11 +32,11 @@ export function Project(props) {
                 <LinkBox>
                     <Link href={props.data.previewLink}>
                         <Icon src={linkIcon} />
-                        <TextLink>Live Preview</TextLink>
+                        <TextLink>{language.live_preview}</TextLink>
                     </Link>
                     <Link href={props.data.repositoryLink}>
                         <Icon src={githubIcon} />
-                        <TextLink>View Code</TextLink>
+                        <TextLink>{language.view_code}</TextLink>
                     </Link>
                 </LinkBox>
             </ProjectContent>

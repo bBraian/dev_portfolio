@@ -7,6 +7,8 @@ import profile from "../../assets/images/profile_pic.png";
 import { portuguese } from "../../data/languages/portuguese";
 import { english } from "../../data/languages/english";
 
+import { useNavigate } from 'react-router-dom';
+
 import * as Select from '@radix-ui/react-select';
 
 import brazil from "../../assets/brazil_flag.svg";
@@ -18,23 +20,35 @@ import { IoLanguageOutline } from "react-icons/io5";
 
 import { light } from "../../styles/themes/light";
 
-import { CgMenuRightAlt } from "react-icons/cg"
-import { CgClose } from "react-icons/cg"
+import { CgMenuRightAlt, CgClose } from "react-icons/cg"
 import { MobileMenu } from '../MobileMenu';
-import { useState } from 'react';
-import { useContext } from 'react';
+import { useState, useContext } from 'react';
 import { AppContext } from '../../context/AppContext';
 
 export function Header() {
-    const { changeTheme, theme, setLanguage, scrollToSection, homeRef, skillsRef, projectsRef } = useContext(AppContext);
+    const { changeTheme, theme, setLanguage, language, scrollToSection, homeRef, skillsRef, projectsRef } = useContext(AppContext);
     const [mobileNav, setMobileNav] = useState(false);
+    const navigate = useNavigate();
 
-    function changeLanguage(lang) {
+    function handleChangeLanguage(lang) {
         if(lang === "pt") {
             setLanguage(portuguese);
         } else {
             setLanguage(english);
         }
+    }
+
+    function handleNavigateTo(page, section = '') {
+        if(page === '/about' || page === '/contact') {
+            navigate(page);
+        } else {
+            if(window.location.pathname.includes('/about') || window.location.pathname.includes('/contact')) {
+                navigate('/', { state: { targetSection: section }});
+            } else {
+                scrollToSection(page);
+            }
+        }
+ 
     }
 
     function handleOpenMobileNav() {
@@ -45,11 +59,11 @@ export function Header() {
             <HeaderDesktop>
 
                 <Links>
-                    <button onClick={() => scrollToSection(homeRef)}>Home</button>
-                    <button>About</button>
-                    <button onClick={() => scrollToSection(skillsRef)}>Tech Stack</button>
-                    <button onClick={() => scrollToSection(projectsRef)}>Projects</button>
-                    <button>Contact</button>
+                    <button onClick={() => handleNavigateTo(homeRef, 'homeRef')}>{language.home}</button>
+                    <button onClick={() => handleNavigateTo('/about')}>{language.about}</button>
+                    <button onClick={() => handleNavigateTo(skillsRef, 'skillsRef')}>{language.tech_stack}</button>
+                    <button onClick={() => handleNavigateTo(projectsRef, 'projectsRef')}>{language.projects}</button>
+                    <button onClick={() => handleNavigateTo('/contact')}>{language.contact}</button>
 
                     <Icons>
                         <a href="https://github.com/bBraian">
@@ -76,7 +90,7 @@ export function Header() {
                     <div>|</div>
 
 
-                    <Select.Root onValueChange={(lang) => changeLanguage(lang)} defaultValue="eng">
+                    <Select.Root onValueChange={(lang) => handleChangeLanguage(lang)} defaultValue="eng">
                         <SelectTrigger>
                             <LangSelect>
                                 <SelectIcon>
@@ -114,16 +128,6 @@ export function Header() {
                             </SelectContent>
                         </Select.Portal>
                     </Select.Root>
-
-                    {/* <SelectLanguage>
-                        <LangOption>
-                            English
-                        </LangOption>
-                        <LangOption>
-                            Portuguese
-                        </LangOption>
-                        
-                    </SelectLanguage> */}
 
                 </ConfigBox>
             </HeaderDesktop>

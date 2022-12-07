@@ -12,11 +12,11 @@ import { useContext } from "react";
 import { AppContext } from "../../context/AppContext";
 
 export function SkillSection() {
-    const { skillsRef } = useContext(AppContext);
+    const { skillsRef, language } = useContext(AppContext);
     return (
         <SkillsSection ref={skillsRef}>
-            <Title>My Tech Stack</Title>
-            <Subtitle>Technologies I’ve been working with recently</Subtitle>
+            <Title>{language.my_tech_stack}</Title>
+            <Subtitle>{language.tecnologies_section_description}</Subtitle>
 
             <SkillsBox>
                 <Skill src={html} />
