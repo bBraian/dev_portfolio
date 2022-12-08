@@ -16,6 +16,7 @@ export const Title = styled.h1`
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
     font-size: 3rem;
+    text-align: center;
 
     @media (max-width: 866px) {
         font-size: 2.6rem;
@@ -28,6 +29,7 @@ export const Subtitle = styled.h2`
     font-weight: 400;
     font-size: 2rem;
     margin-top: 2rem;
+    text-align: center;
     
     @media (max-width: 866px) {
         font-size: 1.6rem;
