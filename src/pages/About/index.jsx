@@ -9,8 +9,8 @@ export function About() {
 
             <Title>Work Experience</Title>
             <WorkExperienceBox>
-                <WorkExperienceCard title="Software Developer Jr" company="Openfy" />
-                <WorkExperienceCard title="Web Developer" company="Datacode Sistemas" />
+                <WorkExperienceCard title="Software Developer Jr" company="Openfy" locale="Brochier" />
+                <WorkExperienceCard title="Web Developer" company="Datacode Sistemas" locale="Brochier" />
             </WorkExperienceBox>
 
             <Title>Education</Title>

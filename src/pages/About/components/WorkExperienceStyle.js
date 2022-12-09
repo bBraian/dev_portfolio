@@ -2,11 +2,17 @@ import styled from "styled-components";
 
 export const WorkExperienceCardContainer = styled.div`
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
     padding-bottom: 1.2rem;
     border-bottom: 1px solid ${props => props.theme['separator']};
+    gap: 0.25rem;
+`;
+
+export const Row = styled.div`
+    display: flex;
+    flex-direction: row;
     align-items: center;
+    justify-content: space-between;
 `;
 
 export const Box = styled.div`
@@ -20,8 +26,8 @@ export const Box = styled.div`
 
 export const TitleCard = styled.h2`
     color: ${props => props.theme['contents']};
-    font-size: 1.25rem;
-    font-weight: 400;
+    font-size: 1.55rem;
+    font-weight: 500;
     font-family: 'Poppins', sans-serif;
 `;
 
@@ -29,20 +35,20 @@ export const Period = styled.div`
     color: #018C0F;
     background-color: #D7FFE0;
     border-radius: 100px;
-    font-size: 0.6rem;
+    font-size: 0.8rem;
     font-weight: 600;
     font-family: 'Poppins', sans-serif;
-    padding: 5px 22px;
+    padding: 7px 26px;
 `;
 
 export const Infos = styled.div`
     display: flex;
     flex-direction: row;
     color: ${props => props.theme['infos']};
-    font-size: 0.75rem;
+    font-size: 0.9rem;
     font-weight: 500;
     font-family: 'Poppins', sans-serif;
-    width: 75%;
+    width: 40%;
     align-items: center;
     justify-content: ${props => props.align};
 `;
