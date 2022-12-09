@@ -17,7 +17,7 @@ export const NavbarMobile = styled.nav`
     padding: 1.8rem 3.4rem;
 `;
 
-export const Link = styled.a`
+export const Link = styled.button`
     color: ${props => props.theme['titles']};
     border-bottom: 1px solid ${props => props.theme['separator']};
     padding: 0.75rem 0 0.6875rem;

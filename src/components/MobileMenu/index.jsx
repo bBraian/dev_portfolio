@@ -14,23 +14,39 @@ import { useContext } from "react";
 
 import { FiMoon, FiSun } from "react-icons/fi"
 import { AppContext } from "../../context/AppContext";
+import { useNavigate } from "react-router-dom";
 
-export function MobileMenu() {
-    const { changeTheme, theme, language, setLanguage } = useContext(AppContext);
+export function MobileMenu({setMobileNav}) {
+    const { changeTheme, theme, language, setLanguage, homeRef, skillsRef, projectsRef, scrollToSection } = useContext(AppContext);
+
+    const navigate = useNavigate();
 
     function handleChangeLanguage(lang) {
         if(lang !== language) {
             setLanguage(lang);
         }
     }
+
+    function handleNavigateTo(page, section = '') {
+        setMobileNav(false)
+        if(page === '/about' || page === '/contact') {
+            navigate(page);
+        } else {
+            if(window.location.pathname.includes('/about') || window.location.pathname.includes('/contact')) {
+                navigate('/', { state: { targetSection: section }});
+            } else {
+                scrollToSection(page);
+            }
+        }
+    }
     return (
         <MobileMenuContainer>
             <NavbarMobile>
-                <Link>{language.home}</Link>
-                <Link>{language.about}</Link>
-                <Link>{language.tech_stack}</Link>
-                <Link>{language.projects}</Link>
-                <Link>{language.contact}</Link>
+                <Link onClick={() => handleNavigateTo(homeRef, 'homeRef')}>{language.home}</Link>
+                <Link onClick={() => handleNavigateTo('/about')}>{language.about}</Link>
+                <Link onClick={() => handleNavigateTo(skillsRef, 'skillsRef')}>{language.tech_stack}</Link>
+                <Link onClick={() => handleNavigateTo(projectsRef, 'projectsRef')}>{language.projects}</Link>
+                <Link onClick={() => handleNavigateTo('/contact')}>{language.contact}</Link>
 
                 <LanguageBox>
                     <Language onClick={() => handleChangeLanguage(english)}>

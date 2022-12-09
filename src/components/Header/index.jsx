@@ -145,7 +145,7 @@ export function Header() {
                 </ButtonOpenNav>
             </HeaderMobile>
 
-            { mobileNav ? <MobileMenu /> : "" }
+            { mobileNav ? <MobileMenu setMobileNav={setMobileNav} /> : "" }
             
 
         </HeaderContainer>
