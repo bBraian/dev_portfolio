@@ -7,6 +7,7 @@ export const FooterContainer = styled.footer`
     margin: 0 auto; 
     display: flex;
     max-width: 1366px;
+    width: 100%;
     padding: 0 3rem;
     flex-direction: column;
     padding-bottom: 3.5rem;
