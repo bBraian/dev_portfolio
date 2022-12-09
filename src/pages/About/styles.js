@@ -18,8 +18,8 @@ export const AboutContainer = styled.div`
         padding: 4.8rem 3.8rem;
     }
 
-    @media (max-width: 866px) {
-        padding: 3rem 2rem;
+    @media (max-width: 766px) {
+        padding: 2.6rem 1.6rem;
 
     }
 `;
