@@ -5,9 +5,9 @@ import { useContext } from "react";
 import { AppContext } from "../../context/AppContext";
 
 export function ProjectSection() {
-    const { language } = useContext(AppContext)
+    const { language, projectsRef } = useContext(AppContext)
     return (
-        <ProjectSectionContainer>
+        <ProjectSectionContainer ref={projectsRef}>
             <Title>{language.projects}</Title>
             <Subtitle>{language.projects_section_description}</Subtitle>
 

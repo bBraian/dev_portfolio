@@ -9,9 +9,9 @@ import { useContext } from "react";
 import { AppContext } from "../../context/AppContext";
 
 export function Project(props) {
-    const { projectsRef, language } = useContext(AppContext);
+    const { language } = useContext(AppContext);
     return (
-        <ProjectContainer ref={projectsRef}>
+        <ProjectContainer>
             <ProjectImage src={props.data.image} />
 
             <ProjectContent>
