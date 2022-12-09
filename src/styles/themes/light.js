@@ -7,6 +7,8 @@ export const light = {
     'project-bg': '#FFFFFF',
     'separator': '#e1e1e1',
 
+    'header-hover': '#111111',
+
     'boxes': '#f9f9f9',
 
 

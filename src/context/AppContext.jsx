@@ -16,7 +16,9 @@ export function AppContextProvider({children}) {
     const projectsRef = useRef(null);
 
     function scrollToSection(section) {
-        section.current?.scrollIntoView({ behavior: 'smooth' })
+        let height = section.current.offsetTop - 100;
+        window.scrollTo({top: height, behavior: 'smooth'});
+        // section.current?.scrollIntoView({ behavior: 'smooth' })
     }
 
     function changeTheme() {

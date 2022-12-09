@@ -7,6 +7,8 @@ export const dark = {
     'project-bg': '#363636',
     'separator': '#363636',
 
+    'header-hover': '#FFFFFF',
+
     'boxes': '#363636',
     'white': '#FFFFFF',
 

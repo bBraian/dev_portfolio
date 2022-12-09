@@ -43,6 +43,12 @@ export const Links = styled.div`
         font-size: 1.25rem;
         font-weight: 500;
         box-shadow: none;
+        cursor: pointer;
+        transition: all ease-in-out 0.2s;
+    }
+
+    button:hover {
+        color: ${props => props.theme['header-hover']};  
     }
 
 `;
@@ -109,6 +115,7 @@ export const ConfigBox = styled.div`
 `;
 
 export const SwitchRoot = styled(Switch.Root)`
+    cursor: pointer;
     width: 42px;
     height: 25px;
     border-radius: 9999px;
@@ -138,6 +145,7 @@ export const SwitchThumb = styled(Switch.Thumb)`
 `;
 
 export const SelectTrigger = styled(Select.Trigger)`
+    cursor: pointer;
     height: 1.6rem;
     padding: 0 0.4rem 0 0.6rem;
     display: flex;
