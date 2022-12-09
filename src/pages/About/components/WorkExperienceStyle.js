@@ -11,6 +11,7 @@ export const WorkExperienceCardContainer = styled.div`
 
 export const Box = styled.div`
     display: flex;
+    flex: ${props => props.flex};
     flex-direction: column;
     justify-content: center;
     gap: 0.5rem;
@@ -34,9 +35,38 @@ export const Period = styled.div`
     padding: 5px 22px;
 `;
 
-export const Infos = styled.p`
+export const Infos = styled.div`
+    display: flex;
+    flex-direction: row;
     color: ${props => props.theme['infos']};
     font-size: 0.75rem;
     font-weight: 500;
     font-family: 'Poppins', sans-serif;
-`; 
+    width: 75%;
+    align-items: center;
+    justify-content: ${props => props.align};
+`;
+
+export const Company = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+`;
+
+export const Location = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+`;
+
+export const Dates = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+`;

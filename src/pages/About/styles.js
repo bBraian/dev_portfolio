@@ -3,17 +3,17 @@ import styled from "styled-components";
 export const AboutContainer = styled.div`
     display: flex;
     flex-direction: column;
+    align-items: center;
     height: calc(100vh);
     max-width: 1366px;
     margin: 0 auto;
-    padding-top: 8.625rem;
+    padding-top: 6.625rem;
     width: 100%;
     margin-bottom: 5rem;
 
     @media (max-width: 1245px) {
         height: calc(100vh - 3.5rem);
         padding-top: 3.5vh;
-        justify-content: space-evenly;
     }
 `;
 
@@ -45,8 +45,8 @@ export const TextAboutMe = styled.p`
 
 export const WorkExperienceBox = styled.div`
     margin-top: 2.375rem;
-    max-width: 50%;
     display: flex;
+    width: 50%;
     flex-direction: column;
     gap: 1.875rem;
 `;
