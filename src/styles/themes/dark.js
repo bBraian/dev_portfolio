@@ -8,10 +8,10 @@ export const dark = {
     'separator': '#363636',
 
     'header-hover': '#FFFFFF',
+    'infos': '#E9E9E9',
 
     'boxes': '#363636',
     'white': '#FFFFFF',
-
 
     'border-switch': '#848484',
     'background-switch': '#3a3a3a',

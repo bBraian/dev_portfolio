@@ -8,10 +8,11 @@ export const light = {
     'separator': '#e1e1e1',
 
     'header-hover': '#111111',
+    'infos': '#A7A7A7',
 
     'boxes': '#f9f9f9',
 
-
+    
     'border-switch': '#848484',
     'background-switch': '#f1f1f1',
     'icon-switch': '#ffffff',
