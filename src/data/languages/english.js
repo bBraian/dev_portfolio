@@ -18,5 +18,11 @@ export const english = {
     'projects_section_description': 'Things I’ve built so far',
     'tecnologies': 'Tecnologies',
     'live_preview': 'Live Preview',
-    'view_code': 'View Code'
+    'view_code': 'View Code',
+
+
+    'about_me': 'About Me',
+    'desc_about_me': 'I\'ve been passionate about technology and computers since young man, and from the beginning of my career as a developer ended up falling in love with front end. I am constantly looking for new challenges so I can learn even more and evolve. I love working as a team and helping others. In my spare time I take courses, develop projects own and study.',
+    'work_experience': 'Work Experience',
+    'education': 'Education'
 }

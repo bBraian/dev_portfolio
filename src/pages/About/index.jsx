@@ -1,21 +1,26 @@
+import { useContext } from "react";
+import { AppContext } from "../../context/AppContext";
 import { WorkExperienceCard } from "./components/WorkExperienceCard";
 import { AboutContainer, TextAboutMe, Title, WorkExperienceBox } from "./styles";
 
 export function About() {
+    const { language } = useContext(AppContext);
     return (
         <AboutContainer>
-            <Title>About Me</Title>
-            <TextAboutMe>The Generator App is an online tool that helps you to export ready-made templates ready to work as your future website. It helps you to combine slides, panels and other components and export it as a set of static files: HTML/CSS/JS.</TextAboutMe>
+            <Title>{language.about_me}</Title>
+            <TextAboutMe>
+                {language.desc_about_me}
+            </TextAboutMe>
 
-            <Title>Work Experience</Title>
+            <Title>{language.work_experience}</Title>
             <WorkExperienceBox>
                 <WorkExperienceCard title="Software Developer Jr" company="Openfy" locale="Brochier" />
                 <WorkExperienceCard title="Web Developer" company="Datacode Sistemas" locale="Brochier" />
             </WorkExperienceBox>
 
-            <Title>Education</Title>
+            <Title>{language.education}</Title>
             <WorkExperienceBox>
-                <WorkExperienceCard title="Analysis and Development systems" company="Unisinos" />
+                <WorkExperienceCard title="Analysis and systems development" company="Unisinos" />
             </WorkExperienceBox>
         </AboutContainer>
     )

@@ -19,8 +19,7 @@ export const AboutContainer = styled.div`
     }
 
     @media (max-width: 766px) {
-        padding: 2.6rem 1.6rem;
-
+        padding: 2.6rem 1.4rem;
     }
 `;
 
@@ -47,6 +46,11 @@ export const TextAboutMe = styled.p`
     font-size: 1.125rem;
     font-weight: 400;
     font-family: 'Poppins', sans-serif;
+
+    @media (max-width: 1245px) {
+        margin-top: 1.6rem;
+        text-align: justify;
+    }
 `;
 
 export const WorkExperienceBox = styled.div`
@@ -55,4 +59,8 @@ export const WorkExperienceBox = styled.div`
     width: 100%;
     flex-direction: column;
     gap: 1.875rem;
+
+    @media (max-width: 1245px) {
+        margin-top: 1.6rem;
+    }
 `;
