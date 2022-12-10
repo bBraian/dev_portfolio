@@ -23,5 +23,7 @@ export const portuguese = {
     'about_me': 'Sobre Mim',
     'desc_about_me': 'Sou apaixonado por tecnologia e computadores desde jovem, e desde o começo da minha carreira como desenvolvedor acabei me apaixonando por front end. Estou constantemente em busca de novos desafios para que eu possa aprender ainda mais e evoluir. Adoro trabalhar em equipe e ajudar aos outros. Nas horas vagas eu faço cursos, desenvolvo projetos próprios e estudo.',
     'work_experience': 'Experiência',
-    'education': 'Acadêmico'
+    'education': 'Acadêmico',
+
+    'contact_title': 'Para qualquer dúvida, me mande um email'
 }

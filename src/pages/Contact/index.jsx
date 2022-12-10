@@ -1,12 +1,16 @@
-import { ContactBox, ContactContainer, TextGradient } from "./styles";
+import { ContactBox, ContactContainer, TextGradient, Title } from "./styles";
 import { Footer } from "../../components/Footer";
+import { useContext } from "react";
+import { AppContext } from "../../context/AppContext";
 
 export function Contact() {
+    const { language } = useContext(AppContext);
+
     return (
         <ContactContainer>
             <div></div>
             <ContactBox>
-                <h1>For any questions please mail me</h1>
+                <Title>{ language.contact_title }</Title>
                 <TextGradient>braianvoficial@gmail.com</TextGradient>
             </ContactBox>
             <Footer />
