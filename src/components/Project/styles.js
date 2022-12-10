@@ -12,9 +12,9 @@ export const ProjectContainer = styled.div`
     display: flex;
     flex-direction: column;
     /* margin-bottom: 2rem; */
-    -webkit-box-shadow: 2px 2px 100px 0px rgba(0,0,0,1);
-    -moz-box-shadow: 2px 2px 100px 0px rgba(0,0,0,1);
-    box-shadow: 2px 2px 100px 0px rgba(0,0,0,1);
+    -webkit-box-shadow: 2px 2px 100px 0px ${props => props.theme['box-shadow']};
+    -moz-box-shadow: 2px 2px 100px 0px ${props => props.theme['box-shadow']};
+    box-shadow: 2px 2px 100px 0px ${props => props.theme['box-shadow']};
 `;
 
 export const ProjectImage = styled.img`

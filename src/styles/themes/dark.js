@@ -7,11 +7,15 @@ export const dark = {
     'project-bg': '#363636',
     'separator': '#363636',
 
+    'box-shadow': 'rgb(0 0 0)',
+
     'header-hover': '#FFFFFF',
     'infos': '#E9E9E9',
 
     'boxes': '#363636',
     'white': '#FFFFFF',
+
+    'contact-title-color': '#E9E9E9',
 
     'border-switch': '#848484',
     'background-switch': '#3a3a3a',

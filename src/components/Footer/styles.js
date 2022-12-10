@@ -36,7 +36,7 @@ export const Separator = styled.hr`
         margin: 1.2rem 0;
     }
     margin: 2.5rem 0;
-    border: 1px solid #232333;
+    border: 1px solid ${props => props.theme['separator']};
 `;
 
 export const Icons = styled.div`
