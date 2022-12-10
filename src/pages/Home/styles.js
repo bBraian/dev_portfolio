@@ -12,7 +12,7 @@ export const HomeSection = styled.section`
     max-width: 1366px;
     align-items: center;
     margin: 0 auto;
-    padding-top: 6rem;
+    padding-top: 3rem;
     width: 100%;
 
     @media (max-width: 1245px) {
