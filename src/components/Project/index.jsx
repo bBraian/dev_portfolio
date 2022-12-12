@@ -3,6 +3,8 @@ import { Description, Icon, Link, LinkBox, ProjectContainer, ProjectContent, Pro
 import githubIcon from "../../assets/github.svg";
 import linkIcon from "../../assets/link.svg";
 
+import { english } from "../../data/languages/english";
+
 import react from "../../assets/skills/react.svg";
 import html from "../../assets/skills/vscode-icons_file-type-js-official.svg";
 import { useContext } from "react";
@@ -18,7 +20,7 @@ export function Project(props) {
                 <Title>{props.data.name}</Title>
 
                 <Description>
-                    {props.data.description}
+                    { language === english ? props.data.description_eng : props.data.description_pt }
                 </Description>
 
                 <TechStackBox>

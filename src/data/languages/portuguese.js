@@ -25,5 +25,7 @@ export const portuguese = {
     'work_experience': 'Experiência',
     'education': 'Acadêmico',
 
-    'contact_title': 'Para qualquer dúvida, me mande um email'
+    'contact_title': 'Para qualquer dúvida, me mande um email',
+
+    'month': ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez']
 }

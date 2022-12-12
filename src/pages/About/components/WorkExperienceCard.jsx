@@ -23,7 +23,7 @@ export function WorkExperienceCard(props) {
                 
                 <Infos align="end">
                     <Dates>
-                        <HiCalendar /> Sep 2021 - Dec 2021
+                        <HiCalendar /> {props.startDate} - {props.endDate}
                     </Dates>
                 </Infos>
             </Row>

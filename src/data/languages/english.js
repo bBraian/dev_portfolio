@@ -26,5 +26,7 @@ export const english = {
     'work_experience': 'Work Experience',
     'education': 'Education',
 
-    'contact_title': 'For any questions please email me'
+    'contact_title': 'For any questions please email me',
+
+    'month': ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec']
 }
