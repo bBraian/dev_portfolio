@@ -77,5 +77,15 @@ export const projects = [
         description_pt: 'Este é um exemplo de descrição do projeto coisas aleatórias estão aqui na descrição Este é um exemplo de gerador de lorem ipsum para conteúdo fictício', 
         tecnologiesId: [1,2,3],
         repositoryLink: 'https://github.com/bBraian/best-worth'
+    },
+    {
+        id: 9, 
+        name: 'IMC Calculator', 
+        image: 'https://raw.githubusercontent.com/bBraian/IMC_app/main/assets/Capa.png',
+        description_eng: 'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content', 
+        description_pt: 'Este é um exemplo de descrição do projeto coisas aleatórias estão aqui na descrição Este é um exemplo de gerador de lorem ipsum para conteúdo fictício', 
+        tecnologiesId: [1,2,3],
+        previewLink: 'https://play.google.com/store/apps/details?id=com.calculadora.IMC',
+        repositoryLink: 'https://github.com/bBraian/IMC_app'
     }
 ]
