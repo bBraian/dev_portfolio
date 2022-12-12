@@ -23,6 +23,7 @@ export const ProjectImage = styled.img`
     width: 100%;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+    object-fit: cover;
 `;
 
 export const ProjectContent = styled.div`
