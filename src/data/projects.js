@@ -87,5 +87,15 @@ export const projects = [
         tecnologiesId: [1,2,3],
         previewLink: 'https://play.google.com/store/apps/details?id=com.calculadora.IMC',
         repositoryLink: 'https://github.com/bBraian/IMC_app'
+    },
+    {
+        id: 10, 
+        name: 'Digital Menu', 
+        image: 'https://github.com/bBraian/digital-menu/raw/main/src/assets/Capa.png',
+        description_eng: 'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content', 
+        description_pt: 'Este é um exemplo de descrição do projeto coisas aleatórias estão aqui na descrição Este é um exemplo de gerador de lorem ipsum para conteúdo fictício', 
+        tecnologiesId: [1,2,3],
+        previewLink: 'https://digital-menu-seven.vercel.app/',
+        repositoryLink: 'https://github.com/bBraian/digital-menu'
     }
 ]
