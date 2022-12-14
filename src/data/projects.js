@@ -40,16 +40,6 @@ export const projects = [
         repositoryLink: 'https://github.com/bBraian/unisinos-groups'
     },
     {
-        id: 5, 
-        name: 'Timer Ignite', 
-        image: 'https://raw.githubusercontent.com/bBraian/timer-ignite/main/src/assets/capa.png',
-        description_eng: 'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content', 
-        description_pt: 'Este é um exemplo de descrição do projeto coisas aleatórias estão aqui na descrição Este é um exemplo de gerador de lorem ipsum para conteúdo fictício', 
-        tecnologiesId: [1,2,3],
-        previewLink: 'https://timer-ignite-eight.vercel.app/',
-        repositoryLink: 'https://github.com/bBraian/timer-ignite'
-    },
-    {
         id: 6, 
         name: 'Dt Money', 
         image: 'https://raw.githubusercontent.com/bBraian/dt-money/main/src/assets/capa.png',
@@ -58,6 +48,16 @@ export const projects = [
         tecnologiesId: [1,2,3],
         previewLink: 'https://dt-money-bbraian.vercel.app/',
         repositoryLink: 'https://github.com/bBraian/dt-money    '
+    },
+    {
+        id: 5, 
+        name: 'ReactFlix', 
+        image: 'https://raw.githubusercontent.com/bBraian/ReactFlix/main/public/Capa.png',
+        description_eng: 'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content', 
+        description_pt: 'Este é um exemplo de descrição do projeto coisas aleatórias estão aqui na descrição Este é um exemplo de gerador de lorem ipsum para conteúdo fictício', 
+        tecnologiesId: [1,2,3],
+        previewLink: 'https://react-flix-bbraian.vercel.app/',
+        repositoryLink: 'https://github.com/bBraian/ReactFlix'
     },
     {
         id: 7, 
@@ -97,5 +97,15 @@ export const projects = [
         tecnologiesId: [1,2,3],
         previewLink: 'https://digital-menu-seven.vercel.app/',
         repositoryLink: 'https://github.com/bBraian/digital-menu'
-    }
+    },
+    {
+        id: 11, 
+        name: 'Timer Ignite', 
+        image: 'https://raw.githubusercontent.com/bBraian/timer-ignite/main/src/assets/capa.png',
+        description_eng: 'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content', 
+        description_pt: 'Este é um exemplo de descrição do projeto coisas aleatórias estão aqui na descrição Este é um exemplo de gerador de lorem ipsum para conteúdo fictício', 
+        tecnologiesId: [1,2,3],
+        previewLink: 'https://timer-ignite-eight.vercel.app/',
+        repositoryLink: 'https://github.com/bBraian/timer-ignite'
+    },
 ]
