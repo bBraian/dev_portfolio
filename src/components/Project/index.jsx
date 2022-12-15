@@ -4,6 +4,7 @@ import githubIcon from "../../assets/github.svg";
 import linkIcon from "../../assets/link.svg";
 
 import typescript from "../../assets/devicon/bootstrap.svg";
+import DevIcon from "devicon-react-svg";
 
 import { english } from "../../data/languages/english";
 
@@ -30,8 +31,9 @@ export function Project(props) {
                     <TechBox>
                         {props.data.tecnologiesId.map((tecId, index) => {
                             return (
-                                // <TechImg src={tecnologies[tecId].icon} title={tecnologies[tecId].name} key={index} />
-                                <img src={tecnologies[tecId].icon} />
+                                <TechImg src={tecnologies[tecId].icon} title={tecnologies[tecId].name} key={index} />
+                                // <DevIcon icon={tecnologies[tecId].icon} />
+                                
                                 )
                             })}
                     </TechBox>
