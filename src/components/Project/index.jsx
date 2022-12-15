@@ -3,10 +3,12 @@ import { Description, Icon, Link, LinkBox, ProjectContainer, ProjectContent, Pro
 import githubIcon from "../../assets/github.svg";
 import linkIcon from "../../assets/link.svg";
 
+import typescript from "../../assets/devicon/bootstrap.svg";
+
 import { english } from "../../data/languages/english";
 
-import react from "../../assets/skills/react.svg";
-import html from "../../assets/skills/vscode-icons_file-type-js-official.svg";
+import { tecnologies } from "../../data/tecnologies";
+
 import { useContext } from "react";
 import { AppContext } from "../../context/AppContext";
 
@@ -26,8 +28,12 @@ export function Project(props) {
                 <TechStackBox>
                     <TechTitle>{language.tecnologies}</TechTitle>
                     <TechBox>
-                        <TechImg src={react} />
-                        <TechImg src={html} />
+                        {props.data.tecnologiesId.map((tecId, index) => {
+                            return (
+                                // <TechImg src={tecnologies[tecId].icon} title={tecnologies[tecId].name} key={index} />
+                                <img src={tecnologies[tecId].icon} />
+                                )
+                            })}
                     </TechBox>
                 </TechStackBox>
 

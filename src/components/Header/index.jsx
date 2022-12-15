@@ -80,7 +80,6 @@ export function Header() {
 
 
                 <ConfigBox>
-
                     <SwitchRoot onCheckedChange={changeTheme}>
                         <SwitchThumb>
                             { theme === light ? <FiSun /> : <FiMoon /> }

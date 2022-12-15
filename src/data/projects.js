@@ -65,7 +65,7 @@ export const projects = [
         image: 'https://raw.githubusercontent.com/bBraian/ignite_shop/main/src/assets/Capa.png',
         description_eng: 'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content', 
         description_pt: 'Este é um exemplo de descrição do projeto coisas aleatórias estão aqui na descrição Este é um exemplo de gerador de lorem ipsum para conteúdo fictício', 
-        tecnologiesId: [1,2,3],
+        tecnologiesId: [1,2,3,6],
         previewLink: 'https://ignite-shop-hazel.vercel.app/',
         repositoryLink: 'https://github.com/bBraian/ignite_shop'
     },
@@ -104,7 +104,7 @@ export const projects = [
         image: 'https://raw.githubusercontent.com/bBraian/timer-ignite/main/src/assets/capa.png',
         description_eng: 'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content', 
         description_pt: 'Este é um exemplo de descrição do projeto coisas aleatórias estão aqui na descrição Este é um exemplo de gerador de lorem ipsum para conteúdo fictício', 
-        tecnologiesId: [1,2,3],
+        tecnologiesId: [1,2,3,6],
         previewLink: 'https://timer-ignite-eight.vercel.app/',
         repositoryLink: 'https://github.com/bBraian/timer-ignite'
     },
