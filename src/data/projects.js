@@ -5,7 +5,7 @@ export const projects = [
         image: 'https://raw.githubusercontent.com/bBraian/coffee-delivery/main/src/assets/Capa.png',
         description_eng: 'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content', 
         description_pt: 'Este é um exemplo de descrição do projeto coisas aleatórias estão aqui na descrição Este é um exemplo de gerador de lorem ipsum para conteúdo fictício', 
-        tecnologiesId: [1,2,3],
+        tecnologiesId: [10,3,7,11],
         previewLink: 'https://coffee-delivery-bbraian.vercel.app/',
         repositoryLink: 'https://github.com/bBraian/coffee-delivery'
     },
@@ -15,7 +15,7 @@ export const projects = [
         image: 'https://raw.githubusercontent.com/bBraian/todo-list-ignite/main/src/assets/Capa.png',
         description_eng: 'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content', 
         description_pt: 'Este é um exemplo de descrição do projeto coisas aleatórias estão aqui na descrição Este é um exemplo de gerador de lorem ipsum para conteúdo fictício', 
-        tecnologiesId: [1,2,3],
+        tecnologiesId: [10,3,7],
         previewLink: 'https://todo-list-ignite-sigma.vercel.app/',
         repositoryLink: 'https://github.com/bBraian/todo-list-ignite'
     },
@@ -25,7 +25,7 @@ export const projects = [
         image: 'https://raw.githubusercontent.com/bBraian/ignite-feed/main/src/assets/Capa.png',
         description_eng: 'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content', 
         description_pt: 'Este é um exemplo de descrição do projeto coisas aleatórias estão aqui na descrição Este é um exemplo de gerador de lorem ipsum para conteúdo fictício', 
-        tecnologiesId: [1,2,3],
+        tecnologiesId: [10,3,7],
         previewLink: 'https://ignite-feed-bbraian.vercel.app',
         repositoryLink: 'https://github.com/bBraian/ignite-feed'
     },
@@ -35,7 +35,7 @@ export const projects = [
         image: 'https://raw.githubusercontent.com/bBraian/unisinos-groups/main/src/assets/Capa.png',
         description_eng: 'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content', 
         description_pt: 'Este é um exemplo de descrição do projeto coisas aleatórias estão aqui na descrição Este é um exemplo de gerador de lorem ipsum para conteúdo fictício', 
-        tecnologiesId: [1,2,3],
+        tecnologiesId: [3,7],
         previewLink: 'https://unisinos-groups.vercel.app/',
         repositoryLink: 'https://github.com/bBraian/unisinos-groups'
     },
@@ -45,17 +45,17 @@ export const projects = [
         image: 'https://raw.githubusercontent.com/bBraian/dt-money/main/src/assets/capa.png',
         description_eng: 'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content', 
         description_pt: 'Este é um exemplo de descrição do projeto coisas aleatórias estão aqui na descrição Este é um exemplo de gerador de lorem ipsum para conteúdo fictício', 
-        tecnologiesId: [1,2,3],
+        tecnologiesId: [10,3,7,12,13,14,15,16],
         previewLink: 'https://dt-money-bbraian.vercel.app/',
         repositoryLink: 'https://github.com/bBraian/dt-money    '
     },
     {
         id: 5, 
         name: 'ReactFlix', 
-        image: 'https://raw.githubusercontent.com/bBraian/ReactFlix/main/public/Capa.png',
+        image: 'https://raw.githubusercontent.com/bBraian/ReactFlix/main/src/assets/Capa.png',
         description_eng: 'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content', 
         description_pt: 'Este é um exemplo de descrição do projeto coisas aleatórias estão aqui na descrição Este é um exemplo de gerador de lorem ipsum para conteúdo fictício', 
-        tecnologiesId: [1,2,3],
+        tecnologiesId: [3,7],
         previewLink: 'https://react-flix-bbraian.vercel.app/',
         repositoryLink: 'https://github.com/bBraian/ReactFlix'
     },
@@ -65,7 +65,7 @@ export const projects = [
         image: 'https://raw.githubusercontent.com/bBraian/ignite_shop/main/src/assets/Capa.png',
         description_eng: 'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content', 
         description_pt: 'Este é um exemplo de descrição do projeto coisas aleatórias estão aqui na descrição Este é um exemplo de gerador de lorem ipsum para conteúdo fictício', 
-        tecnologiesId: [1,2,3,6],
+        tecnologiesId: [8,7,6,15,16,17],
         previewLink: 'https://ignite-shop-hazel.vercel.app/',
         repositoryLink: 'https://github.com/bBraian/ignite_shop'
     },
@@ -75,7 +75,7 @@ export const projects = [
         image: 'https://raw.githubusercontent.com/bBraian/best-worth/main/src/assets/Capa.png',
         description_eng: 'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content', 
         description_pt: 'Este é um exemplo de descrição do projeto coisas aleatórias estão aqui na descrição Este é um exemplo de gerador de lorem ipsum para conteúdo fictício', 
-        tecnologiesId: [1,2,3],
+        tecnologiesId: [9,3,7],
         repositoryLink: 'https://github.com/bBraian/best-worth'
     },
     {
@@ -84,7 +84,7 @@ export const projects = [
         image: 'https://raw.githubusercontent.com/bBraian/IMC_app/main/assets/Capa.png',
         description_eng: 'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content', 
         description_pt: 'Este é um exemplo de descrição do projeto coisas aleatórias estão aqui na descrição Este é um exemplo de gerador de lorem ipsum para conteúdo fictício', 
-        tecnologiesId: [1,2,3],
+        tecnologiesId: [9,3,7],
         previewLink: 'https://play.google.com/store/apps/details?id=com.calculadora.IMC',
         repositoryLink: 'https://github.com/bBraian/IMC_app'
     },
@@ -94,7 +94,7 @@ export const projects = [
         image: 'https://github.com/bBraian/digital-menu/raw/main/src/assets/Capa.png',
         description_eng: 'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content', 
         description_pt: 'Este é um exemplo de descrição do projeto coisas aleatórias estão aqui na descrição Este é um exemplo de gerador de lorem ipsum para conteúdo fictício', 
-        tecnologiesId: [1,2,3],
+        tecnologiesId: [10,3,7,15],
         previewLink: 'https://digital-menu-seven.vercel.app/',
         repositoryLink: 'https://github.com/bBraian/digital-menu'
     },
@@ -104,7 +104,7 @@ export const projects = [
         image: 'https://raw.githubusercontent.com/bBraian/timer-ignite/main/src/assets/capa.png',
         description_eng: 'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content', 
         description_pt: 'Este é um exemplo de descrição do projeto coisas aleatórias estão aqui na descrição Este é um exemplo de gerador de lorem ipsum para conteúdo fictício', 
-        tecnologiesId: [1,2,3,6],
+        tecnologiesId: [10,8,7,11,12,13],
         previewLink: 'https://timer-ignite-eight.vercel.app/',
         repositoryLink: 'https://github.com/bBraian/timer-ignite'
     },

@@ -3,8 +3,6 @@ import { Description, Icon, Link, LinkBox, ProjectContainer, ProjectContent, Pro
 import githubIcon from "../../assets/github.svg";
 import linkIcon from "../../assets/link.svg";
 
-import typescript from "../../assets/devicon/bootstrap.svg";
-import DevIcon from "devicon-react-svg";
 
 import { english } from "../../data/languages/english";
 
