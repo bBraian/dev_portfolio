@@ -1,13 +1,20 @@
 import { Skill, SkillsBox, SkillsSection, Subtitle, Title } from "./styles";
 
-import react from "../../assets/skills/react.svg";
-import boostrap from "../../assets/skills/bootstrap.svg";
-import github from "../../assets/skills/logos_git-icon.svg";
-import git from "../../assets/skills/akar-icons_github-fill.svg";
-import html from "../../assets/skills/vscode-icons_file-type-html.svg";
-import js from "../../assets/skills/vscode-icons_file-type-js-official.svg";
-import css from "../../assets/skills/vscode-icons_file-type-css.svg";
-import tailwind from "../../assets/skills/vscode-icons_file-type-tailwind.svg";
+import react from "../../assets/devicon/react.svg";
+import boostrap from "../../assets/devicon/bootstrap.svg";
+import github from "../../assets/devicon/github.svg";
+import git from "../../assets/devicon/git.svg";
+import html from "../../assets/devicon/html.svg";
+import js from "../../assets/devicon/js.svg";
+import css from "../../assets/devicon/css.svg";
+import tailwind from "../../assets/devicon/tailwind.svg";
+import next from "../../assets/devicon/next.svg";
+import php from "../../assets/devicon/php.svg";
+import mysql from "../../assets/devicon/mysql.svg";
+import ts from "../../assets/devicon/ts.svg";
+import vscode from "../../assets/devicon/vscode.svg";
+import figma from "../../assets/devicon/figma.svg";
+
 import { useContext } from "react";
 import { AppContext } from "../../context/AppContext";
 
@@ -19,14 +26,18 @@ export function SkillSection() {
             <Subtitle>{language.tecnologies_section_description}</Subtitle>
 
             <SkillsBox>
-                <Skill src={html} />
-                <Skill src={css} />
-                <Skill src={js} />
-                <Skill src={react} />
-                <Skill src={boostrap} />
-                <Skill src={tailwind} />
-                <Skill src={git} />
-                <Skill src={github} />
+                <Skill src={html} title="HTML" />
+                <Skill src={css} title="CSS" />
+                <Skill src={js} title="Javascript" />
+                <Skill src={ts} title="Typescript" />
+                <Skill src={react} title="ReactJS" />
+                <Skill src={git} title="Git" />
+                <Skill src={github} title="Github" />
+                <Skill src={php} title="PHP" />
+                <Skill src={mysql} title="MySQL" />
+                <Skill src={next} title="Next" />
+                <Skill src={vscode} title="Visual Studio Code" />
+                <Skill src={figma} title="Figma" />
             </SkillsBox>
         </SkillsSection>
     )

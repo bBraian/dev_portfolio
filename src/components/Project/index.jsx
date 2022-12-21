@@ -30,7 +30,6 @@ export function Project(props) {
                         {props.data.tecnologiesId.map((tecId, index) => {
                             return (
                                 <TechImg src={tecnologies[tecId].icon} title={tecnologies[tecId].name} key={index} />
-                                // <DevIcon icon={tecnologies[tecId].icon} />
                                 
                                 )
                             })}

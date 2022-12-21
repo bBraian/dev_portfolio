@@ -37,7 +37,12 @@ export function About() {
 
             <Title>{language.education}</Title>
             <WorkExperienceBox>
-                <WorkExperienceCard title="Analysis and systems development" company="Unisinos" />
+                <WorkExperienceCard 
+                    title="Analysis and systems development" 
+                    company="Unisinos"
+                    startDate={language.month[1] + ` 2020`}
+                    endDate={language.month[5] + ` 2024`}
+                />
             </WorkExperienceBox>
         </AboutContainer>
     )
