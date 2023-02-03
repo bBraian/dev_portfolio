@@ -2,7 +2,7 @@ import { Description, Icon, Link, LinkBox, ProjectContainer, ProjectContent, Pro
 
 import githubIcon from "../../assets/github.svg";
 import linkIcon from "../../assets/link.svg";
-
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 import { english } from "../../data/languages/english";
 
@@ -15,7 +15,8 @@ export function Project(props) {
     const { language } = useContext(AppContext);
     return (
         <ProjectContainer>
-            <ProjectImage src={props.data.image} />
+
+            <ProjectImage src={props.data.image} effect="blur" />
 
             <ProjectContent>
                 <Title>{props.data.name}</Title>

@@ -15,6 +15,7 @@ export const HeaderContainer = styled.header`
     position: fixed;
     backdrop-filter: blur(20px);
     background: rgba(0,0,0,0, 0.5);
+    z-index: 9999;
 `;
 
 export const HeaderDesktop = styled.div`

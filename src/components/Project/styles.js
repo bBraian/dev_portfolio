@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export const ProjectContainer = styled.div`
     @media (max-width: 1024px) {
@@ -17,7 +18,7 @@ export const ProjectContainer = styled.div`
     box-shadow: 2px 2px 100px 0px ${props => props.theme['box-shadow']};
 `;
 
-export const ProjectImage = styled.img`
+export const ProjectImage = styled(LazyLoadImage)`
     overflow: hidden;
     max-height: 16.25rem;
     width: 100%;
