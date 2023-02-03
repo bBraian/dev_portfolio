@@ -20,7 +20,6 @@ export const ProjectContainer = styled.div`
 
 export const ProjectImage = styled(LazyLoadImage)`
     overflow: hidden;
-    max-height: 16.25rem;
     width: 100%;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;

@@ -4,15 +4,17 @@ import profile from "../../assets/images/profile_pic.png";
 import { ProjectSection } from "../../components/ProjectSection";
 import { Footer } from "../../components/Footer";
 import { SkillSection } from "../../components/SkillSection";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AppContext } from "../../context/AppContext";
 import { useLocation } from "react-router-dom";
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 
 export function Home() {
     const { language, homeRef, skillsRef, projectsRef, scrollToSection } = useContext(AppContext);
     const { state } = useLocation();
     const { targetSection } = state || {};
+    const [imageHeight, setImageHeight] = useState(364.8)
     useEffect(() => {
         if(targetSection != "") {
             switch (targetSection) {
@@ -26,7 +28,10 @@ export function Home() {
                     scrollToSection(projectsRef);
                     break;
             }
-            
+        }
+
+        if(window.screen.width < 1245) {
+            setImageHeight(153.6);
         }
     }, [])
     return (
@@ -46,7 +51,7 @@ export function Home() {
                 </div>
                 <div>
                     <BackgroundGradient>
-                        <ProfileImage src={profile} />
+                        <ProfileImage src={profile} effect="blur" height={imageHeight} />
                     </BackgroundGradient>
                 </div>
             </HomeSection>

@@ -16,7 +16,7 @@ export function Project(props) {
     return (
         <ProjectContainer>
 
-            <ProjectImage src={props.data.image} effect="blur" />
+            <ProjectImage src={props.data.image} effect="blur" placeholderSrc={props.data.image} height={260} />
 
             <ProjectContent>
                 <Title>{props.data.name}</Title>

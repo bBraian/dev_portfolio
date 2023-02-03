@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export const HomeContainer = styled.div`
     width: 100%;
@@ -69,7 +70,7 @@ export const TextGradient = styled.div`
     }
 `;
 
-export const ProfileImage = styled.img`
+export const ProfileImage = styled(LazyLoadImage)`
     @media (max-width: 1245px) {
         width: 9.6rem;
         height: 9.6rem;
