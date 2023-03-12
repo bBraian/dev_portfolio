@@ -33,8 +33,8 @@ export const projects = [
         id: 4, 
         name: 'Unisinos Groups', 
         image: 'https://raw.githubusercontent.com/bBraian/unisinos-groups/main/src/assets/Capa.png',
-        description_eng: 'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content', 
-        description_pt: 'Este é um exemplo de descrição do projeto coisas aleatórias estão aqui na descrição Este é um exemplo de gerador de lorem ipsum para conteúdo fictício', 
+        description_eng: 'I created this project to storage the whatsapp group of each class of the college', 
+        description_pt: 'Eu criei esse projeto para armazenar gropos de whatsapp de cada cadeira da faculdade', 
         tecnologiesId: [3,7],
         previewLink: 'https://unisinos-groups.vercel.app/',
         repositoryLink: 'https://github.com/bBraian/unisinos-groups'
