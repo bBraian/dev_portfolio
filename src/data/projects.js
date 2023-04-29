@@ -108,4 +108,14 @@ export const projects = [
         previewLink: 'https://timer-ignite-eight.vercel.app/',
         repositoryLink: 'https://github.com/bBraian/timer-ignite'
     },
+    {
+        id: 12, 
+        name: 'SavePass', 
+        image: 'https://i.imgur.com/Fo2xv6d.png',
+        description_eng: 'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content', 
+        description_pt: 'Este é um exemplo de descrição do projeto coisas aleatórias estão aqui na descrição Este é um exemplo de gerador de lorem ipsum para conteúdo fictício', 
+        tecnologiesId: [10,8,7,11,12,13],
+        previewLink: 'https://play.google.com/store/apps/details?id=com.bbraaian.savepass',
+        repositoryLink: 'https://github.com/bBraian/savepass-app'
+    },
 ]
