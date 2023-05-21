@@ -113,7 +113,7 @@ export const projects = [
         name: 'SavePass', 
         image: 'https://i.imgur.com/Fo2xv6d.png',
         description_eng: 'This app is a simple app to save, update and see your passwords. I also have create a security system to unlock the app using your finger print (if possible) or a password created when you create your account.', 
-        description_pt: 'Este é um exemplo de descrição do projeto coisas aleatórias estão aqui na descrição Este é um exemplo de gerador de lorem ipsum para conteúdo fictício', 
+        description_pt: 'Esse é um app simples para ver, criar e atualizar suas senhas. O app conta com o sistema de segurança por digital (se possível) ou com uma senha criada quando você cria a sua conta', 
         tecnologiesId: [9,3,7],
         previewLink: 'https://play.google.com/store/apps/details?id=com.bbraaian.savepass',
         repositoryLink: 'https://github.com/bBraian/savepass-app'
