@@ -103,7 +103,7 @@ export const projects = [
         name: 'Timer Ignite', 
         image: 'https://raw.githubusercontent.com/bBraian/timer-ignite/main/src/assets/capa.png',
         description_eng: 'This project is a Timer developer during a react course', 
-        description_pt: 'Este é um exemplo de descrição do projeto coisas aleatórias estão aqui na descrição Este é um exemplo de gerador de lorem ipsum para conteúdo fictício', 
+        description_pt: 'Esse é um projeto de timer desenvolvido durante um curso de ReactJS', 
         tecnologiesId: [10,8,7,11,12,13],
         previewLink: 'https://timer-ignite-eight.vercel.app/',
         repositoryLink: 'https://github.com/bBraian/timer-ignite'
