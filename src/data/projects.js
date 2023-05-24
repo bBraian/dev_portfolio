@@ -93,7 +93,7 @@ export const projects = [
         name: 'Digital Menu', 
         image: 'https://github.com/bBraian/digital-menu/raw/main/src/assets/Capa.png',
         description_eng: 'This app is a digital menu where you as a client, can create and update your products. Users can view the digital menu and order on WhatsApp', 
-        description_pt: 'Este é um exemplo de descrição do projeto coisas aleatórias estão aqui na descrição Este é um exemplo de gerador de lorem ipsum para conteúdo fictício', 
+        description_pt: 'Esse app é um cardápio digital onde você como cliente pode criar, atualizar e excluir produtos. Usuários podem ver o cardápio digital e fazer um pedido via WhatsApp', 
         tecnologiesId: [10,3,7,15],
         previewLink: 'https://digital-menu-seven.vercel.app/',
         repositoryLink: 'https://github.com/bBraian/digital-menu'
