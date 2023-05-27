@@ -44,7 +44,7 @@ export const projects = [
         name: 'Dt Money', 
         image: 'https://raw.githubusercontent.com/bBraian/dt-money/main/src/assets/capa.png',
         description_eng: 'This project is a money manager interface that was developed during a react course', 
-        description_pt: 'Este é um exemplo de descrição do projeto coisas aleatórias estão aqui na descrição Este é um exemplo de gerador de lorem ipsum para conteúdo fictício', 
+        description_pt: 'Esse e um projeto de uma interface de gerenciamento de dinheiro feito durante um curso de react', 
         tecnologiesId: [10,3,7,12,13,14,15,16],
         previewLink: 'https://dt-money-bbraian.vercel.app/',
         repositoryLink: 'https://github.com/bBraian/dt-money    '
