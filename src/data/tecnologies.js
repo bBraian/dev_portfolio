@@ -35,5 +35,4 @@ export const tecnologies = [
     {id: 15, name: 'axios', icon: axios},
     {id: 16, name: 'stripe', icon: stripe},
     {id: 17, name: 'stitches', icon: stitches},
-
 ]

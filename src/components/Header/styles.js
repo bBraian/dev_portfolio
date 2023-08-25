@@ -186,6 +186,7 @@ export const SelectValue = styled(Select.Value)`
 
 export const SelectContent = styled(Select.Content)`
     overflow: hidden;
+    z-index: 999999;
     background-color: ${props => props.theme['background-switch']};
     border-radius: 6px;
     box-shadow: 0px 10px 38px -10px rgba(22, 23, 24, 0.35), 0px 10px 20px -15px rgba(22, 23, 24, 0.2);

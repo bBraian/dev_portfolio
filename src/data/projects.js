@@ -118,4 +118,14 @@ export const projects = [
         previewLink: 'https://play.google.com/store/apps/details?id=com.bbraaian.savepass',
         repositoryLink: 'https://github.com/bBraian/savepass-app'
     },
+    {
+        id: 13, 
+        name: 'Redux Player', 
+        image: 'https://raw.githubusercontent.com/bBraian/redux-video-player/main/src/assets/Capa.png',
+        description_eng: 'This application was developed during a course to introduce how to use redux and zustand in a react application.', 
+        description_pt: 'Essa aplicação foi desenvolvida durante um curso introduzindo como usar o redux e o zustand em uma aplicação react', 
+        tecnologiesId: [7, 10, 4, 15],
+        previewLink: 'https://redux-video-player-ecru.vercel.app/',
+        repositoryLink: 'https://github.com/bBraian/redux-video-player'
+    },
 ]
