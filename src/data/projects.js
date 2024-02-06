@@ -11,13 +11,13 @@ export const projects = [
     },
     {
         id: 2, 
-        name: 'Todo List', 
-        image: 'https://raw.githubusercontent.com/bBraian/todo-list-ignite/main/src/assets/Capa.png',
-        description_eng: 'This project is the famous to-do list app. You can create, delete or mark tasks as completed', 
-        description_pt: 'Esse projeto é o famoso app de lista de afazeres. Você pode criar, excluir ou marcar tarefas como concluídas', 
-        tecnologiesId: [10,3,7],
+        name: 'iCook', 
+        image: 'https://raw.githubusercontent.com/bBraian/iCook/main/src/assets/Capa.png',
+        description_eng: "This is my college's final year project. It's basically a system of cooking recipes", 
+        description_pt: 'Este é o projeto de conclusão de curso da minha faculdade. É basicamente um sistema de receitas culinárias', 
+        tecnologiesId: [3,8,7,10,11,12,15],
         previewLink: 'https://todo-list-ignite-sigma.vercel.app/',
-        repositoryLink: 'https://github.com/bBraian/todo-list-ignite'
+        repositoryLink: 'https://github.com/bBraian/iCook'
     },
     {
         id: 3, 
@@ -26,7 +26,7 @@ export const projects = [
         description_eng: 'This project was deloped during rocketseat course', 
         description_pt: 'Este projeto foi desenvolvido durante um curso da rockeseat', 
         tecnologiesId: [10,3,7],
-        previewLink: 'https://ignite-feed-bbraian.vercel.app',
+        previewLink: 'https://icook-five.vercel.app/',
         repositoryLink: 'https://github.com/bBraian/ignite-feed'
     },
     {
@@ -127,5 +127,15 @@ export const projects = [
         tecnologiesId: [7, 10, 4, 15],
         previewLink: 'https://redux-video-player-ecru.vercel.app/',
         repositoryLink: 'https://github.com/bBraian/redux-video-player'
+    },
+    {
+        id: 14, 
+        name: 'Todo List', 
+        image: 'https://raw.githubusercontent.com/bBraian/todo-list-ignite/main/src/assets/Capa.png',
+        description_eng: 'This project is the famous to-do list app. You can create, delete or mark tasks as completed', 
+        description_pt: 'Esse projeto é o famoso app de lista de afazeres. Você pode criar, excluir ou marcar tarefas como concluídas', 
+        tecnologiesId: [10,3,7],
+        previewLink: 'https://todo-list-ignite-sigma.vercel.app/',
+        repositoryLink: 'https://github.com/bBraian/todo-list-ignite'
     },
 ]
