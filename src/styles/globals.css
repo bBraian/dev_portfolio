@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@theme {
+  --color-background-light: #ffffff;
+  --color-background-dark: #191919;
+  --color-home-title-light: #42446e;
+  --color-home-title-dark: #d9d9d9;
+  --color-titles-light: #42446e;
+  --color-titles-dark: #cccccc;
+  --color-contents-light: #666666;
+  --color-contents-dark: #a7a7a7;
+  --color-project-bg-light: #ffffff;
+  --color-project-bg-dark: #363636;
+  --color-separator-light: #e1e1e1;
+  --color-separator-dark: #363636;
+  --color-infos-light: #a7a7a7;
+  --color-infos-dark: #e9e9e9;
+  --color-boxes-light: #f9f9f9;
+  --color-boxes-dark: #363636;
+  --color-contact-title-light: #1e0e62;
+  --color-contact-title-dark: #e9e9e9;
+
+  --font-sans: "Poppins", "sans-serif";
+  --animate-spin-slow: spin 10s linear infinite;
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #0a4bff 3%, #ff9100 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
