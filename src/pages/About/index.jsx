@@ -1,7 +1,7 @@
 import { useContext, useEffect } from "react";
 import { motion } from "framer-motion";
 import { AppContext } from "../../context/AppContext";
-import { WorkExperienceCard } from "./WorkExperienceCard";
+import { WorkExperienceCard } from "../../components/WorkExperienceCard";
 import { Footer } from "../../components/Footer";
 
 export default function About() {
@@ -30,12 +30,12 @@ export default function About() {
         language.about_work_1_h3 ||
           "Entrega e manutenção de features end-to-end",
       ],
-      tech: ["React", "TypeScript", "Tailwind", "Node.js"],
+      tech: ["React", "TypeScript", "Tailwind", "Node.js", "PostgreSQL", "PHP", "Laravel", "Vue", "Docker", "Micro-services"],
       links: [],
     },
     {
       title: "Software Developer Jr",
-      company: "Datacode Sistemas",
+      company: "Happy Saude",
       locale: "Brochier",
       startDate: `${language.month[7]} 2021`,
       endDate: `${language.month[3]} 2025`,
@@ -47,7 +47,7 @@ export default function About() {
         language.about_work_2_h1 || "Implementação de novas telas e fluxos",
         language.about_work_2_h2 || "Correções e refinamentos com foco em UX",
       ],
-      tech: ["JavaScript", "React", "SQL"],
+      tech: ["JavaScript", "React", "SQL", "PHP", "GitHub"],
       links: [],
     },
     {
@@ -63,16 +63,14 @@ export default function About() {
       highlights: [
         language.about_work_3_h1 || "Suporte a demandas do produto e correções",
       ],
-      tech: ["JavaScript", "HTML", "CSS"],
+      tech: ["JavaScript", "HTML", "CSS", "PHP", "MySQL", "ScriptCase", "Bootstrap", "jQuery", "Git"],
       links: [],
     },
   ];
 
   const education = [
     {
-      title:
-        language.education_type_courses ||
-        "Engenharia de Software em IA Aplicada",
+      title: "Engenharia de Software em IA Aplicada",
       company: language.education_provider || "UniPDS",
       locale: null,
       startDate: `${language.month[2]} 2026`,
@@ -143,10 +141,6 @@ export default function About() {
           <h2 className="text-3xl md:text-4xl font-bold text-titles-light dark:text-titles-dark transition-colors">
             {language.work_experience}
           </h2>
-          <p className="text-sm md:text-base text-contents-light dark:text-contents-dark max-w-xl">
-            {language.work_experience_desc ||
-              "Onde atuei recentemente e o tipo de impacto que gosto de gerar: entregas consistentes, UX caprichada e código sustentável."}
-          </p>
         </div>
 
         <div className="grid grid-cols-1 gap-6">
@@ -165,10 +159,6 @@ export default function About() {
           <h2 className="text-3xl md:text-4xl font-bold text-titles-light dark:text-titles-dark transition-colors">
             {language.education}
           </h2>
-          <p className="text-sm md:text-base text-contents-light dark:text-contents-dark max-w-xl">
-            {language.education_desc ||
-              "Base acadêmica e estudo contínuo para evoluir em arquitetura, qualidade e front end moderno."}
-          </p>
         </div>
 
         <div className="grid grid-cols-1 gap-6">
