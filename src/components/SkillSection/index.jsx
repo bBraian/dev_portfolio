@@ -3,33 +3,41 @@ import { AppContext } from "../../context/AppContext";
 import { motion } from "framer-motion";
 
 import react from "../../assets/devicon/react.svg";
-import github from "../../assets/devicon/github.svg";
 import git from "../../assets/devicon/git.svg";
-import html from "../../assets/devicon/html.svg";
 import js from "../../assets/devicon/js.svg";
-import css from "../../assets/devicon/css.svg";
 import next from "../../assets/devicon/next.svg";
 import php from "../../assets/devicon/php.svg";
 import mysql from "../../assets/devicon/mysql.svg";
 import ts from "../../assets/devicon/ts.svg";
-import vscode from "../../assets/devicon/vscode.svg";
 import figma from "../../assets/devicon/figma.svg";
+import node from "../../assets/devicon/nodejs.svg";
+import postgres from "../../assets/devicon/postgresql.svg";
+import windows from "../../assets/devicon/windows.svg";
+import macos from "../../assets/devicon/apple.svg";
+import linux from "../../assets/devicon/linux.svg";
+import laravel from "../../assets/devicon/laravel.svg";
+import vue from "../../assets/devicon/vuejs.svg";
+import nestjs from "../../assets/devicon/nestjs.svg";
 
 export function SkillSection() {
     const { skillsRef, language } = useContext(AppContext);
     
     const skills = [
-        { src: html, title: "HTML" },
-        { src: css, title: "CSS" },
         { src: js, title: "Javascript" },
         { src: ts, title: "Typescript" },
         { src: react, title: "ReactJS" },
-        { src: git, title: "Git" },
-        { src: github, title: "Github" },
+        { src: vue, title: "Vue.js" },
+        { src: next, title: "Next.js" },
+        { src: node, title: "Node.js" },
+        { src: nestjs, title: "NestJS" },
         { src: php, title: "PHP" },
+        { src: laravel, title: "Laravel" },
         { src: mysql, title: "MySQL" },
-        { src: next, title: "Next" },
-        { src: vscode, title: "Visual Studio Code" },
+        { src: postgres, title: "PostgreSQL" },
+        { src: linux, title: "Linux" },
+        { src: macos, title: "macOS" },
+        { src: windows, title: "Windows" },
+        { src: git, title: "Git" },
         { src: figma, title: "Figma" },
     ];
 
