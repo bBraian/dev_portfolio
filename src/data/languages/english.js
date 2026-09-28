@@ -50,12 +50,13 @@ export const english = {
   projects: {
     eyebrow: "Portfolio",
     title: "Things I've built",
-    description: "Personal, academic and course projects — each one taught me something new.",
+    description: "Personal, client and study projects — each one taught me something new.",
     filters: { all: "All", web: "Web", mobile: "Mobile" },
     livePreview: "Live preview",
     viewCode: "Code",
     showAll: "Show all projects",
     showLess: "Show less",
+    client: "Client",
   },
 
   cta: {

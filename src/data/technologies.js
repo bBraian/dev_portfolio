@@ -28,8 +28,10 @@ import figma from "../assets/devicon/figma.svg";
 import linux from "../assets/devicon/linux.svg";
 import macos from "../assets/devicon/apple.svg";
 import windows from "../assets/devicon/windows.svg";
+import threejs from "../assets/devicon/threejs.svg";
 
 // `darkFix` rescues logos that disappear on the dark background (black or very dark marks).
+// `icon` is optional: techs without a light-weight logo render as a text-only chip.
 export const technologies = {
   html: { name: "HTML", icon: html },
   css: { name: "CSS", icon: css },
@@ -47,6 +49,8 @@ export const technologies = {
   stitches: { name: "Stitches", icon: stitches },
   radix: { name: "Radix", icon: radix },
   redux: { name: "Redux", icon: redux },
+  zustand: { name: "Zustand" },
+  threejs: { name: "Three.js", icon: threejs, darkFix: "dark:invert" },
   zod: { name: "Zod", icon: zod },
   axios: { name: "Axios", icon: axios },
   stripe: { name: "Stripe", icon: stripe, darkFix: "dark:invert" },

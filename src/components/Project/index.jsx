@@ -1,5 +1,5 @@
 import { m } from "framer-motion";
-import { ArrowUpRight, Github, Smartphone } from "lucide-react";
+import { ArrowUpRight, BriefcaseBusiness, Github, Smartphone } from "lucide-react";
 import { clsx } from "clsx";
 
 import { useApp } from "../../context/AppContext";
@@ -28,11 +28,21 @@ export function Project({ data, ref }) {
           decoding="async"
           className="h-full w-full object-cover object-top transition-transform duration-500 ease-out group-hover:scale-105"
         />
-        {data.platform === "mobile" && (
-          <span className="absolute top-3 left-3 inline-flex items-center gap-1 rounded-full bg-black/60 px-2.5 py-1 text-xs font-semibold text-white backdrop-blur">
-            <Smartphone size={12} aria-hidden="true" />
-            Mobile
-          </span>
+        {(data.platform === "mobile" || data.client) && (
+          <div className="absolute top-3 right-3 flex gap-1.5">
+            {data.platform === "mobile" && (
+              <span className="inline-flex items-center gap-1 rounded-full bg-black/60 px-2.5 py-1 text-xs font-semibold text-white backdrop-blur">
+                <Smartphone size={12} aria-hidden="true" />
+                Mobile
+              </span>
+            )}
+            {data.client && (
+              <span className="inline-flex items-center gap-1 rounded-full bg-black/60 px-2.5 py-1 text-xs font-semibold text-white backdrop-blur">
+                <BriefcaseBusiness size={12} aria-hidden="true" />
+                {t.projects.client}
+              </span>
+            )}
+          </div>
         )}
       </div>
 
@@ -40,27 +50,31 @@ export function Project({ data, ref }) {
         <h3 className="text-xl font-bold">{data.name}</h3>
         <p className="flex-1 text-sm leading-relaxed text-muted">{data.description[lang]}</p>
 
-        <ul className="flex flex-wrap gap-1.5" aria-label="Tech">
-          {data.tech.map((id) => {
-            const tech = technologies[id];
-            return (
-              <li
-                key={id}
-                className="inline-flex items-center gap-1.5 rounded-full border border-line bg-surface-2 px-2.5 py-1 text-xs font-medium text-muted"
-              >
-                <img
-                  src={tech.icon}
-                  alt=""
-                  width="14"
-                  height="14"
-                  loading="lazy"
-                  className={clsx("h-3.5 w-3.5 object-contain", tech.darkFix)}
-                />
-                {tech.name}
-              </li>
-            );
-          })}
-        </ul>
+        {data.tech.length > 0 && (
+          <ul className="flex flex-wrap gap-1.5" aria-label="Tech">
+            {data.tech.map((id) => {
+              const tech = technologies[id];
+              return (
+                <li
+                  key={id}
+                  className="inline-flex items-center gap-1.5 rounded-full border border-line bg-surface-2 px-2.5 py-1 text-xs font-medium text-muted"
+                >
+                  {tech.icon && (
+                    <img
+                      src={tech.icon}
+                      alt=""
+                      width="14"
+                      height="14"
+                      loading="lazy"
+                      className={clsx("h-3.5 w-3.5 object-contain", tech.darkFix)}
+                    />
+                  )}
+                  {tech.name}
+                </li>
+              );
+            })}
+          </ul>
+        )}
 
         <div className="mt-2 flex gap-2 border-t border-line pt-4">
           {data.previewLink && (
