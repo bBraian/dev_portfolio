@@ -1,5 +1,5 @@
 import coffeeDelivery from "../assets/projects/coffee-delivery.webp";
-import icook from "../assets/projects/icook.webp";
+import icookAi from "../assets/projects/icook-ai.webp";
 import unisinosGroups from "../assets/projects/unisinos-groups.webp";
 import igniteShop from "../assets/projects/ignite-shop.webp";
 import bestPrice from "../assets/projects/best-price.webp";
@@ -15,6 +15,18 @@ import pocketSoccer from "../assets/projects/pocket-soccer.webp";
 // Ordered by relevance: the first ones are shown before "show all".
 // `platform` drives the Web / Mobile filter; `client` marks work delivered for a client.
 export const projects = [
+  {
+    id: "icook-ai",
+    name: "iCook",
+    image: icookAi,
+    platform: "web",
+    description: {
+      en: "Recipe platform with built-in AI: chat with the assistant to generate recipes from what you have at home, then edit and save them. Search with filters for time, calories and diet.",
+      pt: "Plataforma de receitas com IA integrada: converse com o assistente para gerar receitas com o que você tem em casa, depois edite e salve. Busca com filtros de tempo, calorias e dieta.",
+    },
+    tech: ["react", "mui", "vite", "zod", "axios"],
+    previewLink: "https://icook-web.vercel.app/",
+  },
   {
     id: "fretline",
     name: "Fretline",
@@ -65,19 +77,6 @@ export const projects = [
     tech: ["typescript", "react", "zustand", "vite"],
     previewLink: "https://pocket-soccer.vercel.app/",
     repositoryLink: "https://github.com/bBraian/pocket-soccer",
-  },
-  {
-    id: "icook",
-    name: "iCook",
-    image: icook,
-    platform: "web",
-    description: {
-      en: "My college capstone project: a recipe platform where people share, search and save cooking recipes.",
-      pt: "Meu TCC da faculdade: uma plataforma de receitas onde as pessoas compartilham, buscam e salvam receitas culinárias.",
-    },
-    tech: ["typescript", "react", "vite", "reactRouter", "styledComponents", "axios"],
-    previewLink: "https://icook-five.vercel.app/",
-    repositoryLink: "https://github.com/bBraian/iCook",
   },
   {
     id: "unisinos-groups",

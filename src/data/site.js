@@ -4,8 +4,6 @@ export const site = {
   shortName: "Braian",
   handle: "bBraian",
   email: "braianvoficial@gmail.com",
-  phone: "+55 51 99626-8989",
-  whatsapp: "https://wa.me/5551996268989",
   location: "Brochier, RS — Brasil",
   careerStart: new Date(2020, 11, 1),
 };

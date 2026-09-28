@@ -131,7 +131,6 @@ export const portuguese = {
     copy: "Copiar e-mail",
     copied: "Copiado!",
     sendEmail: "Enviar e-mail",
-    whatsapp: "WhatsApp",
     location: "Localização",
   },
 

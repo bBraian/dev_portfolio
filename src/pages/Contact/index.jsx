@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { m } from "framer-motion";
-import { Mail, Copy, Check, MessageCircle, MapPin, Github, Linkedin, ArrowUpRight } from "lucide-react";
+import { Mail, Copy, Check, MapPin, Github, Linkedin, ArrowUpRight } from "lucide-react";
 
 import { useApp } from "../../context/AppContext";
 import { useDocumentTitle } from "../../hooks/useDocumentTitle";
@@ -30,7 +30,6 @@ export default function Contact() {
   const linkedin = socials.find((social) => social.key === "linkedin");
 
   const channels = [
-    { icon: MessageCircle, label: t.contact.whatsapp, value: site.phone, href: site.whatsapp },
     { icon: Linkedin, label: linkedin.label, value: "Braian Viacava", href: linkedin.url },
     { icon: Github, label: github.label, value: `@${site.handle}`, href: github.url },
   ];
@@ -82,7 +81,7 @@ export default function Contact() {
         </div>
       </m.div>
 
-      <ul className="mt-16 grid w-full max-w-4xl gap-4 text-left sm:grid-cols-3">
+      <ul className="mt-16 grid w-full max-w-2xl gap-4 text-left sm:grid-cols-2">
         {channels.map(({ icon: Icon, label, value, href }, index) => (
           <Reveal as="li" key={label} delay={index * 0.08}>
             <a

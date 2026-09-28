@@ -131,7 +131,6 @@ export const english = {
     copy: "Copy email",
     copied: "Copied!",
     sendEmail: "Send an email",
-    whatsapp: "WhatsApp",
     location: "Location",
   },
 

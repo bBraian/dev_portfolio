@@ -48,6 +48,7 @@ export const technologies = {
   styledComponents: { name: "styled-components", icon: styledComponents },
   stitches: { name: "Stitches", icon: stitches },
   radix: { name: "Radix", icon: radix },
+  mui: { name: "Material UI" },
   redux: { name: "Redux", icon: redux },
   zustand: { name: "Zustand" },
   threejs: { name: "Three.js", icon: threejs, darkFix: "dark:invert" },
