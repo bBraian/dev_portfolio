@@ -1,64 +1,78 @@
-import { useContext } from "react";
-import { AppContext } from "../../context/AppContext";
-import { tecnologies } from "../../data/tecnologies";
-import { motion } from "framer-motion";
-import { ExternalLink, Github } from "lucide-react";
+import { m } from "framer-motion";
+import { ArrowUpRight, Github, Smartphone } from "lucide-react";
+import { clsx } from "clsx";
 
-export function Project({ data }) {
-  const { language, currentLanguage } = useContext(AppContext);
-  const isEnglish = currentLanguage === "en";
+import { useApp } from "../../context/AppContext";
+import { technologies } from "../../data/technologies";
+
+// `ref` lets AnimatePresence (mode="popLayout") measure the card on exit.
+export function Project({ data, ref }) {
+  const { t, lang } = useApp();
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true, margin: "-50px" }}
-      className="bg-project-bg-light dark:bg-project-bg-dark rounded-2xl overflow-hidden shadow-xl flex flex-col h-full transition-colors border border-separator-light dark:border-separator-dark"
+    <m.li
+      ref={ref}
+      initial={{ opacity: 0, y: 24 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, scale: 0.96, transition: { duration: 0.15 } }}
+      transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
+      className="group relative flex flex-col overflow-hidden rounded-3xl border border-line bg-surface transition-[border-color,box-shadow,translate] duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-[0_24px_60px_-24px_var(--color-glow)]"
     >
-      <div className="relative h-48 md:h-64 overflow-hidden bg-gray-200 dark:bg-gray-800">
+      <div className="relative aspect-16/10 overflow-hidden bg-surface-2">
         <img
           src={data.image}
-          alt={data.name}
+          alt=""
+          width="960"
+          height="600"
           loading="lazy"
           decoding="async"
-          className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+          className="h-full w-full object-cover object-top transition-transform duration-500 ease-out group-hover:scale-105"
         />
+        {data.platform === "mobile" && (
+          <span className="absolute top-3 left-3 inline-flex items-center gap-1 rounded-full bg-black/60 px-2.5 py-1 text-xs font-semibold text-white backdrop-blur">
+            <Smartphone size={12} aria-hidden="true" />
+            Mobile
+          </span>
+        )}
       </div>
 
-      <div className="p-6 flex flex-col flex-1 gap-4">
-        <h3 className="text-2xl font-semibold text-titles-light dark:text-titles-dark">{data.name}</h3>
+      <div className="flex flex-1 flex-col gap-4 p-6">
+        <h3 className="text-xl font-bold">{data.name}</h3>
+        <p className="flex-1 text-sm leading-relaxed text-muted">{data.description[lang]}</p>
 
-        <p className="text-contents-light dark:text-contents-dark text-sm leading-relaxed flex-1">
-          {isEnglish ? data.description_eng : data.description_pt}
-        </p>
+        <ul className="flex flex-wrap gap-1.5" aria-label="Tech">
+          {data.tech.map((id) => {
+            const tech = technologies[id];
+            return (
+              <li
+                key={id}
+                className="inline-flex items-center gap-1.5 rounded-full border border-line bg-surface-2 px-2.5 py-1 text-xs font-medium text-muted"
+              >
+                <img
+                  src={tech.icon}
+                  alt=""
+                  width="14"
+                  height="14"
+                  loading="lazy"
+                  className={clsx("h-3.5 w-3.5 object-contain", tech.darkFix)}
+                />
+                {tech.name}
+              </li>
+            );
+          })}
+        </ul>
 
-        <div className="space-y-3">
-          <p className="text-xs font-bold uppercase tracking-wider text-titles-light dark:text-titles-dark opacity-80">
-            {language.tecnologies}:
-          </p>
-          <div className="flex flex-wrap gap-2">
-            {data.tecnologiesId.map((tecId) => (
-              <img
-                key={tecId}
-                src={tecnologies[tecId].icon}
-                title={tecnologies[tecId].name}
-                className="w-5 h-5 object-contain transition-all"
-                alt={tecnologies[tecId].name}
-              />
-            ))}
-          </div>
-        </div>
-
-        <div className="pt-4 mt-auto flex items-center justify-between border-t border-separator-light dark:border-separator-dark">
+        <div className="mt-2 flex gap-2 border-t border-line pt-4">
           {data.previewLink && (
             <a
               href={data.previewLink}
               target="_blank"
               rel="noreferrer"
-              className="flex items-center gap-2 text-sm font-medium text-titles-light dark:text-titles-dark hover:underline transition-all"
+              aria-label={`${t.projects.livePreview}: ${data.name}`}
+              className="inline-flex h-10 flex-1 items-center justify-center gap-1.5 rounded-full bg-fg px-4 text-sm font-semibold text-bg transition-opacity duration-200 hover:opacity-85"
             >
-              <ExternalLink size={16} />
-              {language.live_preview}
+              {t.projects.livePreview}
+              <ArrowUpRight size={16} aria-hidden="true" />
             </a>
           )}
           {data.repositoryLink && (
@@ -66,14 +80,15 @@ export function Project({ data }) {
               href={data.repositoryLink}
               target="_blank"
               rel="noreferrer"
-              className="flex items-center gap-2 text-sm font-medium text-titles-light dark:text-titles-dark hover:underline transition-all"
+              aria-label={`${t.projects.viewCode}: ${data.name}`}
+              className="inline-flex h-10 flex-1 items-center justify-center gap-1.5 rounded-full border border-line px-4 text-sm font-semibold transition-colors duration-200 hover:bg-surface-2"
             >
-              <Github size={16} />
-              {language.view_code}
+              <Github size={16} aria-hidden="true" />
+              {t.projects.viewCode}
             </a>
           )}
         </div>
       </div>
-    </motion.div>
+    </m.li>
   );
 }

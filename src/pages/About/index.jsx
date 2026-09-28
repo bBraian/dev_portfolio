@@ -1,178 +1,93 @@
-import { useContext, useEffect } from "react";
-import { motion } from "framer-motion";
-import { AppContext } from "../../context/AppContext";
-import { WorkExperienceCard } from "../../components/WorkExperienceCard";
-import { Footer } from "../../components/Footer";
+import { m } from "framer-motion";
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
+
+import profile from "../../assets/images/profile_pic.webp";
+import { useApp } from "../../context/AppContext";
+import { useDocumentTitle } from "../../hooks/useDocumentTitle";
+import { experience, education } from "../../data/experience";
+import { TimelineItem } from "../../components/TimelineItem";
+import { SectionHeading } from "../../components/SectionHeading";
 
 export default function About() {
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }, []);
-
-  const { language } = useContext(AppContext);
-
-  const workExperience = [
-    {
-      title: "Software Developer Mid Level",
-      company: "Syonet",
-      locale: "Porto Alegre",
-      startDate: `${language.month[3]} 2025`,
-      endDate: null,
-      type: "Full Time",
-      description:
-        language.about_work_1_desc ||
-        "Atuo no desenvolvimento e evolução de produtos, com foco em entregar interfaces performáticas, acessíveis e com ótima experiência de uso.",
-      highlights: [
-        language.about_work_1_h1 ||
-          "Colaboração com time de produto, design e backend",
-        language.about_work_1_h2 ||
-          "Melhorias contínuas em performance e qualidade",
-        language.about_work_1_h3 ||
-          "Entrega e manutenção de features end-to-end",
-      ],
-      tech: ["React", "TypeScript", "Tailwind", "Node.js", "PostgreSQL", "PHP", "Laravel", "Vue", "Docker", "Micro-services"],
-      links: [],
-    },
-    {
-      title: "Software Developer Jr",
-      company: "Happy Saude",
-      locale: "Brochier",
-      startDate: `${language.month[7]} 2021`,
-      endDate: `${language.month[3]} 2025`,
-      type: "Full Time",
-      description:
-        language.about_work_2_desc ||
-        "Desenvolvimento de funcionalidades, correções e melhorias em sistemas internos, com atenção a estabilidade e usabilidade.",
-      highlights: [
-        language.about_work_2_h1 || "Implementação de novas telas e fluxos",
-        language.about_work_2_h2 || "Correções e refinamentos com foco em UX",
-      ],
-      tech: ["JavaScript", "React", "SQL", "PHP", "GitHub"],
-      links: [],
-    },
-    {
-      title: "Software Developer Jr",
-      company: "Openfy",
-      locale: "Brochier",
-      startDate: `${language.month[11]} 2020`,
-      endDate: `${language.month[7]} 2021`,
-      type: "Full Time",
-      description:
-        language.about_work_3_desc ||
-        "Experiência inicial em desenvolvimento, dando suporte a features e correções, aprendendo boas práticas e ritmo de entrega.",
-      highlights: [
-        language.about_work_3_h1 || "Suporte a demandas do produto e correções",
-      ],
-      tech: ["JavaScript", "HTML", "CSS", "PHP", "MySQL", "ScriptCase", "Bootstrap", "jQuery", "Git"],
-      links: [],
-    },
-  ];
-
-  const education = [
-    {
-      title: "Engenharia de Software em IA Aplicada",
-      company: language.education_provider || "UniPDS",
-      locale: null,
-      startDate: `${language.month[2]} 2026`,
-      endDate: null,
-      type: language.education_type_continuous || "Ongoing",
-      description:
-        language.about_edu_2_desc ||
-        "Estudos contínuos para aprofundar em engenharia de software e IA aplicada.",
-      highlights: [
-        language.about_edu_2_h1 ||
-          "Aprimoramento em engenharia de software e IA aplicada",
-        language.about_edu_2_h2 ||
-          "Projetos pessoais para consolidar aprendizado",
-      ],
-      tech: [
-        "IA",
-        "Engenharia de Software",
-        "Machine Learning",
-        "Deep Learning",
-      ],
-      expectedCompletion: {
-        label: language.expected_completion || "Expected completion:",
-        value:
-          language.expected_completion_value || `${language.month[11]} 2026`,
-      },
-      links: [],
-    },
-    {
-      title: "Analysis and systems development",
-      company: "Unisinos",
-      locale: null,
-      startDate: `${language.month[1]} 2020`,
-      endDate: `${language.month[5]} 2024`,
-      type: language.education_type_degree || "Degree",
-      description:
-        language.about_edu_1_desc ||
-        "Formação com base em algoritmos, engenharia de software, banco de dados e desenvolvimento web.",
-      highlights: [
-        language.about_edu_1_h1 || "Fundamentos sólidos de desenvolvimento",
-        language.about_edu_1_h2 || "Projetos práticos e trabalho em equipe",
-      ],
-      tech: ["Algorithms", "Databases", "Software Engineering"],
-      links: [],
-    },
-  ];
+  const { t } = useApp();
+  useDocumentTitle(t.meta.about);
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-      className="flex flex-col gap-14 pt-10 md:pt-20"
-    >
-      <div className="space-y-6 max-w-4xl">
-        <div className="space-y-3">
-          <h1 className="text-4xl md:text-5xl font-bold text-titles-light dark:text-titles-dark transition-colors">
-            {language.about_me}
-          </h1>
-          <div className="h-1 w-20 bg-linear-to-r from-[#0a4bff] to-[#ff9100] rounded-full" />
-        </div>
-        <p className="text-lg text-contents-light dark:text-contents-dark leading-relaxed transition-colors">
-          {language.desc_about_me}
-        </p>
-      </div>
-
-      <section className="space-y-8">
-        <div className="flex items-end justify-between gap-6 flex-wrap">
-          <h2 className="text-3xl md:text-4xl font-bold text-titles-light dark:text-titles-dark transition-colors">
-            {language.work_experience}
-          </h2>
-        </div>
-
-        <div className="grid grid-cols-1 gap-6">
-          {workExperience.map((item) => (
-            <WorkExperienceCard
-              key={`${item.company}-${item.title}-${item.startDate}`}
-              {...item}
-              endLabel={language.currently || language.present || "Present"}
-            />
-          ))}
-        </div>
-      </section>
-
-      <section className="space-y-8">
-        <div className="flex items-end justify-between gap-6 flex-wrap">
-          <h2 className="text-3xl md:text-4xl font-bold text-titles-light dark:text-titles-dark transition-colors">
-            {language.education}
-          </h2>
+    <div className="flex flex-col gap-24 pt-12 md:pt-20">
+      <m.section
+        initial={{ opacity: 0, y: 24 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+        className="grid items-center gap-10 lg:grid-cols-[1fr_20rem]"
+      >
+        <div className="space-y-6">
+          <span className="inline-flex items-center gap-2 rounded-full border border-line bg-surface px-3 py-1 text-xs font-semibold uppercase tracking-[0.14em] text-accent">
+            <span className="h-1.5 w-1.5 rounded-full bg-brand-gradient" aria-hidden="true" />
+            {t.about.eyebrow}
+          </span>
+          <h1 className="text-4xl leading-[1.05] font-bold md:text-6xl">{t.about.title}</h1>
+          <div className="space-y-4 text-lg leading-relaxed text-muted text-pretty">
+            {t.about.body.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
+          </div>
+          <Link
+            to="/contact"
+            className="group inline-flex h-12 items-center gap-2 rounded-full bg-brand-gradient px-6 font-semibold text-white transition-transform duration-200 hover:-translate-y-0.5"
+          >
+            {t.cta.button}
+            <ArrowRight size={18} className="transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true" />
+          </Link>
         </div>
 
-        <div className="grid grid-cols-1 gap-6">
-          {education.map((item) => (
-            <WorkExperienceCard
-              key={`${item.company}-${item.title}-${item.startDate}`}
-              {...item}
-              endLabel={language.currently || language.present || "Present"}
-            />
-          ))}
+        <div className="relative mx-auto hidden w-full max-w-xs lg:block">
+          <div className="absolute -inset-4 rotate-6 rounded-4xl bg-brand-gradient opacity-50 blur-2xl" aria-hidden="true" />
+          <img
+            src={profile}
+            alt={t.hero.photoAlt}
+            width="640"
+            height="640"
+            className="relative aspect-square w-full rotate-3 rounded-4xl border border-line object-cover transition-transform duration-500 hover:rotate-0"
+          />
         </div>
-      </section>
+      </m.section>
 
-      <Footer />
-    </motion.div>
+      <Timeline
+        title={t.about.work}
+        description={t.about.workDescription}
+        items={experience}
+        texts={t.experience}
+      />
+
+      <Timeline
+        title={t.about.education}
+        description={t.about.educationDescription}
+        items={education}
+        texts={t.education}
+      />
+    </div>
+  );
+}
+
+function Timeline({ title, description, items, texts }) {
+  const { t } = useApp();
+  return (
+    <section className="flex flex-col gap-10">
+      <SectionHeading title={title} description={description} align="start" />
+      <ol>
+        {items.map((item, index) => (
+          <TimelineItem
+            key={item.id}
+            item={item}
+            text={texts[item.id]}
+            locale={t.locale}
+            presentLabel={t.about.present}
+            expectedLabel={t.about.expectedCompletion}
+            isLast={index === items.length - 1}
+          />
+        ))}
+      </ol>
+    </section>
   );
 }

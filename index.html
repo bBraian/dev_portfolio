@@ -2,14 +2,45 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <title>Braian Viacava | Developer Portfolio</title>
+    <title>Braian Viacava — Software Developer</title>
+    <meta
+      name="description"
+      content="Portfolio of Braian Viacava de Ávila, software developer building fast, accessible web products with React, Vue, Node.js and Laravel."
+    />
+    <meta name="author" content="Braian Viacava de Ávila" />
+    <meta name="theme-color" content="#08090e" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#f6f7fb" media="(prefers-color-scheme: light)" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Braian Viacava — Software Developer" />
+    <meta
+      property="og:description"
+      content="Fast, accessible and polished web products with React, Vue, Node.js and Laravel."
+    />
+    <meta name="twitter:card" content="summary" />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400..700&family=Space+Grotesk:wght@500..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Apply the saved theme before first paint to avoid a light/dark flash. Default: dark. -->
+    <script>
+      (function () {
+        var theme = null;
+        try {
+          theme = localStorage.getItem("portfolio-theme");
+        } catch (e) {}
+        if (theme !== "light") document.documentElement.classList.add("dark");
+      })();
+    </script>
   </head>
-  <body class="bg-background-light dark:bg-background-dark text-contents-light dark:text-contents-dark transition-colors duration-300">
+  <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
